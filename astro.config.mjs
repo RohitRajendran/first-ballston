@@ -3,7 +3,7 @@ import netlify from '@astrojs/netlify';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://firstballstoncommons.com',
+  site: 'https://firstballston.com',
   adapter: netlify({
     mode: 'static',
   }),
