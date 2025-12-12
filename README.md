@@ -1,22 +1,31 @@
-# First Ballston Commons – Static Reference
+# First Ballston Commons
 
-Static recreation of the First Ballston Commons site using local Bootstrap assets and minimal custom CSS. Includes quick links for residents, approved colors, notices, and locally hosted HOA documents.
+Marketing site for the First Ballston Commons community, rebuilt with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
 
-## Structure
-- `index.html` – Welcome/hero, community overview, resident quick links.
-- `approved-colors.html` – Color swatches and links to Benjamin Moore references.
-- `notice-to-residents.html` – Community reminders and rules.
-- `style.css` – Light overrides for typography and cards.
-- `bootstrap.min.css` – Local Bootstrap theme.
-- `assets/` – Images and PDFs (bylaws, covenants, forms, approved colors).
+## Getting started
 
-## Links
-- Resident portal: https://engage.goenumerate.com/s/firstballstoncommons/home.php
-- Contact: https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941
+```bash
+npm install
+npm run dev
+```
 
-## Usage
-Open any HTML file locally in a browser. All CSS is local; Bootstrap JS still uses the CDN. To use offline, download the Bootstrap JS bundle and update the script tag references.
+- `npm run dev` – start the development server.
+- `npm run build` – create a production build in `dist/`.
+- `npm run preview` – run the built site locally.
+- `npm run check` – type-check Astro components.
 
-## Notes
-- Colors page uses hover styles via `.color-card` in `style.css`.
-- All HOA documents are served from `assets/` for offline access; verify file freshness periodically.
+## Project structure
+
+- `src/pages/` – Astro pages for the public site.
+- `src/components/` – shared UI components like the navigation and footer.
+- `src/layouts/` – base page layout and metadata handling.
+- `src/styles/` – global Tailwind entrypoint and custom component styles.
+- `public/` – static assets (icons, manifest, banner image, PDF forms).
+
+## Content
+
+The site includes:
+- Homepage overview and neighborhood highlights.
+- Community background and contact links.
+- Resident notices for parking, noise, and trash routines.
+- Architectural Review guidance and pre-approved front door colors.

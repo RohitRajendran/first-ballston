@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout
+  title="About the Community – First Ballston Commons"
+  description="Learn about First Ballston Commons: a close-knit Ballston neighborhood with brick townhomes, commuter-friendly transit, and community-minded homeowners."
+  canonical="/about-the-community"
+>
+  <NavBar />
+
+  <section class="relative hero-image text-white overflow-hidden pt-20">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
+      <div class="max-w-3xl space-y-4">
+        <span class="inline-flex items-center gap-2 bg-white/85 text-primary font-bold uppercase tracking-[0.14em] text-xs px-3 py-1 rounded-full shadow">
+          Community
+        </span>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">About the Community</h1>
+      </div>
+    </div>
+  </section>
+
+  <main class="flex-grow bg-background-light">
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <article class="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden">
+          <div class="p-6 md:p-10 space-y-10">
+            <section class="space-y-4">
+              <div class="flex items-center gap-3">
+                <h2 class="text-3xl font-bold m-0">About First Ballston Commons</h2>
+              </div>
+              <p class="text-lg text-slate-700">
+                First Ballston Commons is a residential townhouse community located in the Ballston area of Arlington, Virginia.
+                The neighborhood features multi-level brick townhomes on a tree-lined street within a walkable, transit-oriented area.
+              </p>
+              <p class="text-lg text-slate-700">
+                Homeowners and renters alike enjoy friendly neighbors, reserved parking, weekly trash removal, and professional grounds care provided by Blade Runners.
+              </p>
+            </section>
+
+            <section class="space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">Getting around</h3>
+              <p class="text-slate-700 leading-relaxed">
+                We are roughly one mile from the Ballston Metro station on both the Orange and Silver Lines, connecting to downtown DC, Rosslyn, Tysons, and beyond.
+                Residents also have quick access to I-66 and Route 50 for regional travel.
+              </p>
+            </section>
+
+            <section class="space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">Community highlights</h3>
+              <ul class="list-disc pl-5 space-y-3 text-slate-700">
+                <li>Private patios and reserved parking for every home.</li>
+                <li>Weekly trash and recycling pick-up to keep the block tidy.</li>
+                <li>Landscaping maintained by Blade Runners for consistent curb appeal.</li>
+                <li>Nearby parks, grocery stores, coffee shops, and playgrounds within walking distance.</li>
+              </ul>
+            </section>
+
+            <section class="space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">Association and contact</h3>
+              <p class="text-slate-700 leading-relaxed">
+                Exterior changes require Architectural Review approval to keep our look cohesive. Residents can find forms, contacts, and meeting updates through the resident portal.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+                  href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="material-symbols-outlined text-base">login</span>
+                  Resident portal
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 transition"
+                  href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="material-symbols-outlined text-base">mail</span>
+                  Contact the board
+                </a>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
