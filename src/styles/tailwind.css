@@ -16,12 +16,6 @@
 }
 
 @layer components {
-  .hero-image {
-    background:
-      linear-gradient(180deg, rgba(16, 25, 34, 0.55), rgba(16, 25, 34, 0.75)),
-      url("/assets/banner.jpg") center/cover no-repeat;
-  }
-
   .section-eyebrow {
     @apply text-primary mb-2 inline-block text-[0.8rem] font-bold tracking-[0.08em] uppercase;
   }
@@ -36,5 +30,9 @@
 
   .feature-card:hover {
     box-shadow: var(--shadow-card);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0.55), rgba(32, 32, 32, 0.75));
   }
 }
