@@ -14,6 +14,12 @@ npm run dev
 - `npm run preview` – run the built site locally.
 - `npm run check` – type-check Astro components.
 
+## Deployment
+
+- Netlify deploys the static build output from `dist/` using the included `netlify.toml`.
+- Build command: `npm run build`
+- Node version: 20
+
 ## Project structure
 
 - `src/pages/` – Astro pages for the public site.
