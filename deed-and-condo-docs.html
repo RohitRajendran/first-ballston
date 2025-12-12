@@ -3,107 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deed &amp; Condo Docs – First Ballston Commons</title>
-  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Deed & Condo Docs – First Ballston Commons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#137fec',
+            'primary-dark': '#0f69c3',
+            'background-light': '#f6f7f8'
+          },
+          fontFamily: {
+            sans: ['Public Sans', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        First Ballston Commons
-        <div class="small text-secondary fw-normal">Arlington, VA</div>
+<body class="min-h-screen flex flex-col bg-background-light text-slate-900 font-sans antialiased">
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-slate-200 bg-white shadow-sm">
+    <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary text-3xl">home</span>
+        <span class="text-lg font-semibold text-slate-900">First Ballston Commons</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button data-collapse-toggle="navbar-default" id="nav-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-slate-700 rounded-lg md:hidden hover:bg-slate-100 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/40" aria-controls="nav-menu" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <span class="material-symbols-outlined">menu</span>
       </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="index.html">Welcome</a></li>
-          <li class="nav-item"><a class="nav-link" href="approved-colors.html">Approved Colors</a></li>
-          <li class="nav-item"><a class="nav-link" href="notice-to-residents.html">Notice to Residents</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="deed-and-condo-docs.html">Deed &amp; Condo Docs</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://engage.goenumerate.com/s/firstballstoncommons/home.php" target="_blank" rel="noopener">Resident Portal</a></li>
+      <div class="hidden w-full md:block md:w-auto" id="nav-menu">
+        <ul class="font-medium flex flex-col p-4 mt-4 border border-slate-200 rounded-xl bg-slate-50 md:flex-row md:items-center md:space-x-6 md:mt-0 md:border-0 md:bg-transparent">
+          <li><a href="index.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 md:hover:bg-transparent md:p-0 md:hover:text-primary">Home</a></li>
+          <li><a href="notice-to-residents.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 md:hover:bg-transparent md:p-0 md:hover:text-primary">Notice to Residents</a></li>
+          <li><a href="approved-colors.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 md:hover:bg-transparent md:p-0 md:hover:text-primary">Approved Colors</a></li>
+          <li><a href="deed-and-condo-docs.html" class="block py-2 px-3 text-primary font-semibold rounded md:p-0">Deed &amp; Condo Docs</a></li>
+          <li class="md:ml-2">
+            <a class="inline-flex items-center gap-1 w-full justify-center px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition md:w-auto" href="https://engage.goenumerate.com/s/firstballstoncommons/home.php" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined text-base">login</span>
+              Resident Portal
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="hero py-5">
-    <div class="container py-md-5">
-      <div class="col-lg-8">
-        <span class="badge text-bg-light text-uppercase text-dark fw-semibold mb-3">Documents</span>
-        <h1 class="display-5 fw-semibold">Deed &amp; Condominium Documents</h1>
+  <section class="relative hero-image text-white overflow-hidden pt-20">
+    <div class="max-w-6xl mx-auto px-4 py-14 md:py-20">
+      <div class="max-w-2xl">
+        <span class="inline-flex items-center gap-2 bg-white/90 text-primary font-bold uppercase tracking-[0.14em] text-xs px-3 py-1 rounded-full shadow">Documents</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mt-4">Deed &amp; Condo Docs</h1>
       </div>
     </div>
   </section>
 
-  <main class="flex-grow-1">
-    <section class="py-5">
-      <div class="container">
-        <article class="card shadow-sm border-0">
-          <div class="card-body p-4 p-md-5">
-            <h2 class="mb-3">Community Documents</h2>
-            <p class="text-muted">Official HOA documents, residents can find these and additional documents in the <a href="https://engage.goenumerate.com/s/firstballstoncommons/home.php" target="_blank" rel="noopener">resident portal</a>.</p>
-            <div class="list-group">
-              <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" href="assets/deed-and-condo-docs.pdf" download>
+  <main class="flex-grow">
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <article class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 md:p-10 space-y-6">
+          <div class="space-y-3">
+            <h2 class="text-2xl md:text-3xl font-bold">Deed &amp; Condo Documents</h2>
+            <p class="text-slate-600">Download the governing documents for First Ballston Commons.</p>
+          </div>
+          <div class="space-y-3">
+            <a class="flex items-center justify-between gap-4 p-4 rounded-xl border border-slate-200 hover:-translate-y-1 hover:shadow-md transition bg-slate-50" href="deed-and-condo-docs.pdf" target="_blank" rel="noopener">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">description</span>
                 <div>
-                  <div class="fw-semibold">Deed &amp; Condo Docs (1979)</div>
+                  <div class="font-semibold">Deed and Condo Documents (PDF)</div>
+                  <div class="text-sm text-slate-500">Download the full packet</div>
                 </div>
-                <span class="badge text-bg-primary">PDF</span>
-              </a>
-              <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" href="assets/architectural-approval-form.pdf" download>
+              </div>
+              <span class="material-symbols-outlined text-primary">download</span>
+            </a>
+            <a class="flex items-center justify-between gap-4 p-4 rounded-xl border border-slate-200 hover:-translate-y-1 hover:shadow-md transition bg-white" href="fbc-amended-bylaws-2024.pdf" target="_blank" rel="noopener">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">gavel</span>
                 <div>
-                  <div class="fw-semibold">Architectural Approval Form</div>
+                  <div class="font-semibold">Amended Bylaws (2024)</div>
+                  <div class="text-sm text-slate-500">Governance updates</div>
                 </div>
-                <span class="badge text-bg-primary">PDF</span>
-              </a>
-              <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" href="assets/approved-colors-scaled.jpg" target="_blank" rel="noopener">
+              </div>
+              <span class="material-symbols-outlined text-primary">download</span>
+            </a>
+            <a class="flex items-center justify-between gap-4 p-4 rounded-xl border border-slate-200 hover:-translate-y-1 hover:shadow-md transition bg-white" href="fbc-amended-covenants-2024.pdf" target="_blank" rel="noopener">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">balance</span>
                 <div>
-                  <div class="fw-semibold">Approved Colors for Front Door</div>
+                  <div class="font-semibold">Amended Covenants (2024)</div>
+                  <div class="text-sm text-slate-500">Community standards</div>
                 </div>
-                <span class="badge text-bg-secondary">JPG</span>
-              </a>
-              <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" href="assets/parking-regulations-2005.pdf" download>
+              </div>
+              <span class="material-symbols-outlined text-primary">download</span>
+            </a>
+            <a class="flex items-center justify-between gap-4 p-4 rounded-xl border border-slate-200 hover:-translate-y-1 hover:shadow-md transition bg-white" href="architectural-approval-form.pdf" target="_blank" rel="noopener">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">home_app_logo</span>
                 <div>
-                  <div class="fw-semibold">Parking Regulations (2005)</div>
+                  <div class="font-semibold">Architectural Approval Form</div>
+                  <div class="text-sm text-slate-500">Submit before exterior updates</div>
                 </div>
-                <span class="badge text-bg-primary">PDF</span>
-              </a>
-              <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" href="assets/fbc-amended-bylaws-2024.pdf" download>
-                <div>
-                  <div class="fw-semibold">Amended Bylaws (2024)</div>
-                </div>
-                <span class="badge text-bg-primary">PDF</span>
-              </a>
-              <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-start" href="assets/fbc-amended-covenants-2024.pdf" download>
-                <div>
-                  <div class="fw-semibold">Amended Covenants (2024)</div>
-                </div>
-                <span class="badge text-bg-primary">PDF</span>
-              </a>
-            </div>
+              </div>
+              <span class="material-symbols-outlined text-primary">download</span>
+            </a>
           </div>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="footer bg-dark text-white py-4">
-    <div class="container">
-      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-        <a class="btn btn-outline-light" href="https://engage.goenumerate.com/s/firstballstoncommons/home.php" target="_blank" rel="noopener">Resident Portal</a>
-        <div class="d-flex flex-wrap align-items-center gap-2 small">
-          <a class="text-white text-decoration-none" href="deed-and-condo-docs.html">Deed &amp; Condo Docs</a>
-          <span class="text-secondary">•</span>
-          <a class="text-white text-decoration-none" href="notice-to-residents.html">Notice to Residents</a>
-          <span class="text-secondary">•</span>
-          <a class="text-white text-decoration-none" href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941" target="_blank" rel="noopener">Contact</a>
+    <footer class="bg-slate-900 text-white py-8 mt-auto">
+      <div class="max-w-6xl mx-auto px-4 space-y-6">
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+              <div>
+                <div class="text-lg font-semibold">First Ballston Commons</div>
+                <div class="text-sm text-slate-300">Arlington, VA</div>
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm">
+              A quiet, connected community with reserved parking, attentive
+              upkeep, and neighbors who look out for each other.
+            </p>
+          </div>
+          <div>
+            <!-- Empty column for spacing -->
+          </div>
+          <div class="space-y-3 flex flex-col items-end text-right">
+            <a
+              class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-white/40 text-white hover:bg-white/10 transition"
+              href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="material-symbols-outlined text-base">login</span>
+              Resident portal
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-slate-400"
+        >
+          <div>© 2024 First Ballston Commons</div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+    <script>
+      (() => {
+        const toggle = document.getElementById("nav-toggle");
+        const menu = document.getElementById("nav-menu");
+        if (!toggle || !menu) return;
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        const setOpen = (open) => {
+          const shouldOpen = open || window.innerWidth >= 768;
+          menu.classList.toggle("hidden", !shouldOpen);
+          toggle.setAttribute("aria-expanded", shouldOpen.toString());
+        };
+
+        toggle.addEventListener("click", () => {
+          const isOpen = menu.classList.contains("hidden");
+          setOpen(isOpen);
+        });
+
+        window.addEventListener("resize", () => setOpen(window.innerWidth >= 768));
+        setOpen(window.innerWidth >= 768);
+      })();
+    </script>
 </body>
 </html>

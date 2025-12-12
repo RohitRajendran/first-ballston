@@ -1,35 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
-
 :root {
-  --font-sans: "Inter", "Segoe UI", -apple-system, system-ui, sans-serif;
-  --font-display: "Space Grotesk", "Inter", "Segoe UI", -apple-system, system-ui, sans-serif;
+  --primary: #137fec;
 }
 
-/* Light overrides that sit on top of default Bootstrap styles */
 body {
-  background-color: #f8f9fa;
-  font-family: var(--font-sans);
   letter-spacing: 0.01em;
 }
 
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("assets/banner.jpg") center/cover no-repeat;
-  color: #fff;
+.hero-image {
+  background: linear-gradient(180deg, rgba(16, 25, 34, 0.55), rgba(16, 25, 34, 0.75)), url("assets/banner.jpg") center/cover no-repeat;
 }
 
-.swatch-chip {
-  height: 150px;
+.section-eyebrow {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
-.color-card {
-  border: 1px solid var(--bs-border-color, #dee2e6);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background-color: rgba(19, 127, 236, 0.1);
+  color: var(--primary);
 }
 
-.color-card:hover,
-.color-card:focus-visible {
-  transform: scale(1.03);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s ease;
+.feature-card {
+  background: #f6f7f8;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease;
 }
 
+.feature-card:hover {
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.12);
+}
+
+.neighborhood-image {
+  background: linear-gradient(180deg, rgba(19, 127, 236, 0.2), rgba(19, 127, 236, 0.05)), url("assets/approved-colors-scaled.jpg") center/cover no-repeat;
+  min-height: 320px;
+}

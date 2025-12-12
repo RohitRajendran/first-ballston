@@ -1,0 +1,9 @@
+{
+  "version": "0.2",
+  "ignorePaths": ["bootstrap.min.css"],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": ["Ballston"],
+  "ignoreWords": [],
+  "import": []
+}
