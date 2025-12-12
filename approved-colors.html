@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Approved Colors – First Ballston Commons</title>
+  <meta name="theme-color" content="#137fec">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
@@ -24,6 +25,11 @@
       }
     };
   </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen flex flex-col bg-background-light text-slate-900 font-sans antialiased">
@@ -227,7 +233,7 @@
         <div class="grid gap-6 md:grid-cols-3">
           <div class="space-y-3">
             <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+              <span class="material-symbols-outlined text-primary text-3xl">home</span>
               <div>
                 <div class="text-lg font-semibold">First Ballston Commons</div>
                 <div class="text-sm text-slate-300">Arlington, VA</div>
@@ -256,7 +262,21 @@
         <div
           class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-slate-400"
         >
-          <div>© 2024 First Ballston Commons</div>
+          <div class="flex items-center gap-1">
+            <span>©</span>
+            <span data-year></span>
+            <span>First Ballston Commons</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span>Built by</span>
+            <a
+              class="text-slate-200 hover:text-white font-semibold"
+              href="https://rohitrajendran.com"
+              target="_blank"
+              rel="noopener"
+              >Rohit Rajendran</a
+            >
+          </div>
         </div>
       </div>
     </footer>
@@ -275,6 +295,11 @@
         toggle.addEventListener("click", () => {
           const isOpen = menu.classList.contains("hidden");
           setOpen(isOpen);
+        });
+
+        const currentYear = new Date().getFullYear();
+        document.querySelectorAll("[data-year]").forEach((el) => {
+          el.textContent = currentYear;
         });
 
         window.addEventListener("resize", () => setOpen(window.innerWidth >= 1024));
