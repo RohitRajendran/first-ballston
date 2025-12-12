@@ -31,6 +31,7 @@ npm run dev
 ## Content
 
 The site includes:
+
 - Homepage overview and neighborhood highlights.
 - Community background and contact links.
 - Resident notices for parking, noise, and trash routines.

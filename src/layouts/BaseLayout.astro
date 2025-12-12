@@ -1,5 +1,5 @@
 ---
-import '../styles/tailwind.css';
+import "../styles/tailwind.css";
 
 interface Props {
   title?: string;
@@ -8,16 +8,19 @@ interface Props {
 }
 
 const {
-  title = 'First Ballston Commons – Arlington, VA',
-  description = 'Discover First Ballston Commons, a welcoming townhouse community near Ballston Metro with tree-lined streets, reserved parking, and easy access to Arlington favorites.',
+  title = "First Ballston Commons – Arlington, VA",
+  description = "Discover First Ballston Commons, a welcoming townhouse community near Ballston Metro with tree-lined streets, reserved parking, and easy access to Arlington favorites.",
   canonical,
 } = Astro.props;
 
 const canonicalUrl = canonical
   ? new URL(canonical, Astro.site ?? Astro.url.origin).toString()
-  : (Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : Astro.url.href);
+  : Astro.site
+    ? new URL(Astro.url.pathname, Astro.site).toString()
+    : Astro.url.href;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

@@ -1,21 +1,22 @@
 ---
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about-the-community', label: 'About the Community' },
+  { href: "/", label: "Home" },
+  { href: "/about-the-community", label: "About the Community" },
 ];
 
 const residentLinks = [
-  { href: '/notice-to-residents', label: 'Notice to Residents' },
-  { href: '/architectural-review', label: 'Architectural Review' },
+  { href: "/notice-to-residents", label: "Notice to Residents" },
+  { href: "/architectural-review", label: "Architectural Review" },
   {
-    href: 'https://engage.goenumerate.com/s/firstballstoncommons/home.php',
-    label: 'Resident Portal',
+    href: "https://engage.goenumerate.com/s/firstballstoncommons/home.php",
+    label: "Resident Portal",
     external: true,
   },
 ];
 
-const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
+
 <nav class="fixed w-full z-50 top-0 start-0 border-b border-slate-200 bg-white shadow-sm">
   <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
     <a href="/" class="flex items-center gap-2">
@@ -33,24 +34,28 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
       <span class="material-symbols-outlined">menu</span>
     </button>
     <div class="hidden w-full lg:block lg:w-auto" id="nav-menu">
-      <ul class="font-medium flex flex-col p-4 mt-4 border border-slate-200 rounded-xl bg-slate-50 lg:flex-row lg:items-center lg:space-x-6 lg:mt-0 lg:border-0 lg:bg-transparent">
-        {navLinks.map((link) => {
-          const isActive = pathname === link.href;
-          return (
-            <li>
-              <a
-                class={`block py-2 px-3 rounded lg:p-0 ${
-                  isActive
-                    ? 'text-primary font-semibold'
-                    : 'text-slate-700 hover:bg-slate-100 lg:hover:bg-transparent lg:hover:text-primary'
-                }`}
-                href={link.href}
-              >
-                {link.label}
-              </a>
-            </li>
-          );
-        })}
+      <ul
+        class="font-medium flex flex-col p-4 mt-4 border border-slate-200 rounded-xl bg-slate-50 lg:flex-row lg:items-center lg:space-x-6 lg:mt-0 lg:border-0 lg:bg-transparent"
+      >
+        {
+          navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <li>
+                <a
+                  class={`block py-2 px-3 rounded lg:p-0 ${
+                    isActive
+                      ? "text-primary font-semibold"
+                      : "text-slate-700 hover:bg-slate-100 lg:hover:bg-transparent lg:hover:text-primary"
+                  }`}
+                  href={link.href}
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          })
+        }
         <li class="relative">
           <button
             id="residents-toggle"
@@ -64,22 +69,28 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
             <span class="material-symbols-outlined text-base">expand_more</span>
           </button>
           <div id="residents-menu" class="hidden mt-2 lg:absolute lg:left-0 lg:mt-3 lg:w-64">
-            <div class="rounded-xl border border-slate-200 bg-white shadow-lg shadow-slate-200/70 p-2 space-y-1">
-              {residentLinks.map((link) => (
-                <a
-                  class={`block py-2 px-3 rounded-lg hover:bg-slate-100 ${
-                    pathname === link.href ? 'text-primary font-semibold lg:font-medium' : 'text-slate-700'
-                  } ${link.external ? 'inline-flex items-center gap-1 w-full' : ''}`}
-                  href={link.href}
-                  target={link.external ? '_blank' : undefined}
-                  rel={link.external ? 'noopener' : undefined}
-                >
-                  {link.label}
-                  {link.external && (
-                    <span class="material-symbols-outlined text-base">open_in_new</span>
-                  )}
-                </a>
-              ))}
+            <div
+              class="rounded-xl border border-slate-200 bg-white shadow-lg shadow-slate-200/70 p-2 space-y-1"
+            >
+              {
+                residentLinks.map((link) => (
+                  <a
+                    class={`block py-2 px-3 rounded-lg hover:bg-slate-100 ${
+                      pathname === link.href
+                        ? "text-primary font-semibold lg:font-medium"
+                        : "text-slate-700"
+                    } ${link.external ? "inline-flex items-center gap-1 w-full" : ""}`}
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener" : undefined}
+                  >
+                    {link.label}
+                    {link.external && (
+                      <span class="material-symbols-outlined text-base">open_in_new</span>
+                    )}
+                  </a>
+                ))
+              }
             </div>
           </div>
         </li>
@@ -89,41 +100,41 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 </nav>
 
 <script>
-  const toggle = document.getElementById('nav-toggle');
-  const menu = document.getElementById('nav-menu');
-  const residentsToggle = document.getElementById('residents-toggle');
-  const residentsMenu = document.getElementById('residents-menu');
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("nav-menu");
+  const residentsToggle = document.getElementById("residents-toggle");
+  const residentsMenu = document.getElementById("residents-menu");
 
   if (toggle && menu) {
     const setResidentsOpen = (isOpen: boolean) => {
       if (!residentsMenu || !residentsToggle) return;
-      residentsMenu.classList.toggle('hidden', !isOpen);
-      residentsToggle.setAttribute('aria-expanded', String(isOpen));
+      residentsMenu.classList.toggle("hidden", !isOpen);
+      residentsToggle.setAttribute("aria-expanded", String(isOpen));
     };
 
     const setMenuOpen = (open: boolean) => {
       const shouldOpen = open || window.innerWidth >= 1024;
-      menu.classList.toggle('hidden', !shouldOpen);
-      toggle.setAttribute('aria-expanded', String(shouldOpen));
+      menu.classList.toggle("hidden", !shouldOpen);
+      toggle.setAttribute("aria-expanded", String(shouldOpen));
       if (!shouldOpen) setResidentsOpen(false);
     };
 
-    toggle.addEventListener('click', () => {
-      const isOpen = menu.classList.contains('hidden');
+    toggle.addEventListener("click", () => {
+      const isOpen = menu.classList.contains("hidden");
       setMenuOpen(isOpen);
     });
 
     if (residentsToggle && residentsMenu) {
-      residentsToggle.addEventListener('click', (event) => {
+      residentsToggle.addEventListener("click", (event) => {
         event.stopPropagation();
-        const isOpen = !residentsMenu.classList.contains('hidden');
+        const isOpen = !residentsMenu.classList.contains("hidden");
         setResidentsOpen(!isOpen);
       });
 
-      document.addEventListener('click', (event) => {
+      document.addEventListener("click", (event) => {
         const target = event.target as Node | null;
         if (
-          residentsMenu.classList.contains('hidden') ||
+          residentsMenu.classList.contains("hidden") ||
           (target && (residentsMenu.contains(target) || residentsToggle.contains(target)))
         ) {
           return;
@@ -132,7 +143,7 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
       });
     }
 
-    window.addEventListener('resize', () => setMenuOpen(window.innerWidth >= 1024));
+    window.addEventListener("resize", () => setMenuOpen(window.innerWidth >= 1024));
     setMenuOpen(window.innerWidth >= 1024);
   }
 </script>
