@@ -33,18 +33,18 @@
         <span class="material-symbols-outlined text-primary text-3xl">home</span>
         <span class="text-lg font-semibold text-slate-900">First Ballston Commons</span>
       </a>
-      <button id="nav-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-slate-700 rounded-lg md:hidden hover:bg-slate-100 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/40" aria-controls="nav-menu" aria-expanded="false">
+      <button id="nav-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-slate-700 rounded-lg lg:hidden hover:bg-slate-100 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/40" aria-controls="nav-menu" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <span class="material-symbols-outlined">menu</span>
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="nav-menu">
-        <ul class="font-medium flex flex-col p-4 mt-4 border border-slate-200 rounded-xl bg-slate-50 md:flex-row md:items-center md:space-x-6 md:mt-0 md:border-0 md:bg-transparent">
-          <li><a href="index.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 md:hover:bg-transparent md:p-0 md:hover:text-primary">Home</a></li>
-          <li><a href="about-the-community.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 md:hover:bg-transparent md:p-0 md:hover:text-primary">About the Community</a></li>
-          <li><a href="notice-to-residents.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 md:hover:bg-transparent md:p-0 md:hover:text-primary">Notice to Residents</a></li>
-          <li><a href="approved-colors.html" class="block py-2 px-3 text-primary font-semibold rounded md:p-0">Approved Colors</a></li>
-          <li class="mt-2 md:mt-0 md:ml-2">
-            <a class="inline-flex items-center gap-1 w-full justify-center px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition md:w-auto" href="https://engage.goenumerate.com/s/firstballstoncommons/home.php" target="_blank" rel="noopener">
+      <div class="hidden w-full lg:block lg:w-auto" id="nav-menu">
+        <ul class="font-medium flex flex-col p-4 mt-4 border border-slate-200 rounded-xl bg-slate-50 lg:flex-row lg:items-center lg:space-x-6 lg:mt-0 lg:border-0 lg:bg-transparent">
+          <li><a href="index.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 lg:hover:bg-transparent lg:p-0 lg:hover:text-primary">Home</a></li>
+          <li><a href="about-the-community.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 lg:hover:bg-transparent lg:p-0 lg:hover:text-primary">About the Community</a></li>
+          <li><a href="notice-to-residents.html" class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 lg:hover:bg-transparent lg:p-0 lg:hover:text-primary">Notice to Residents</a></li>
+          <li><a href="approved-colors.html" class="block py-2 px-3 text-primary font-semibold rounded lg:p-0">Approved Colors</a></li>
+          <li class="mt-2 lg:mt-0 lg:ml-2">
+            <a class="inline-flex items-center gap-1 w-full justify-center px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition lg:w-auto" href="https://engage.goenumerate.com/s/firstballstoncommons/home.php" target="_blank" rel="noopener">
               <span class="material-symbols-outlined text-base">login</span>
               Resident Portal
             </a>
@@ -267,7 +267,7 @@
         if (!toggle || !menu) return;
 
         const setOpen = (open) => {
-          const shouldOpen = open || window.innerWidth >= 768;
+          const shouldOpen = open || window.innerWidth >= 1024;
           menu.classList.toggle("hidden", !shouldOpen);
           toggle.setAttribute("aria-expanded", shouldOpen.toString());
         };
@@ -277,8 +277,8 @@
           setOpen(isOpen);
         });
 
-        window.addEventListener("resize", () => setOpen(window.innerWidth >= 768));
-        setOpen(window.innerWidth >= 768);
+        window.addEventListener("resize", () => setOpen(window.innerWidth >= 1024));
+        setOpen(window.innerWidth >= 1024);
       })();
     </script>
 </body>
