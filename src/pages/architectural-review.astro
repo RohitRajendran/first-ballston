@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
+const approvedColors = [
+  { name: 'Brilliant White', swatch: '#eceeea', code: 'PM-4', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-4/brilliant-white' },
+  { name: 'Cliffside Gray', swatch: '#cdd0cb', code: 'PM-5', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-5/cliffside-gray' },
+  { name: 'Hamilton Blue', swatch: '#63757e', code: 'PM-6', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-6/hamilton-blue' },
+  { name: 'Platinum Gray', swatch: '#a8a9a4', code: 'PM-7', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-7/platinum-gray' },
+  { name: 'Charcoal Slate', swatch: '#646669', code: 'PM-8', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-8/charcoal-slate' },
+  { name: 'Black', swatch: '#313132', code: 'PM-9', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-9/black' },
+  { name: 'Chrome Green', swatch: '#1d402f', code: 'PM-10', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-10/chrome-green' },
+  { name: 'Essex Green', swatch: '#2a362f', code: 'PM-11', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-11/essex-green' },
+  { name: 'Black Forest Green', swatch: '#262e2c', code: 'PM-12', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-12/black-forest-green' },
+  { name: 'Atrium White', swatch: '#f2eee8', code: 'PM-13', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-13/atrium-white' },
+  { name: 'Annapolis Gray', swatch: '#c6bfb1', code: 'PM-14', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-14/annapolis-gray' },
+  { name: 'Cottage Red', swatch: '#5f2e28', code: 'PM-15', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-15/cottage-red' },
+  { name: 'Country Redwood', swatch: '#6d3127', code: 'PM-16', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-16/country-redwood' },
+  { name: 'Classic Burgundy', swatch: '#601f1d', code: 'PM-17', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-17/classic-burgundy' },
+  { name: 'Heritage Red', swatch: '#8b1f1d', code: 'PM-18', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-18/heritage-red' },
+  { name: 'Cameo White', swatch: '#f0e7d2', code: 'PM-25', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-25/cameo-white' },
+  { name: 'Montgomery White', swatch: '#f1e2c3', code: 'PM-26', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-26/montgomery-white' },
+  { name: 'Richmond Bisque', swatch: '#cebfa4', code: 'PM-27', link: 'https://www.benjaminmoore.com/en-us/paint-colors/color/pm-27/richmond-bisque' },
+];
+---
+<BaseLayout
+  title="Architectural Review – First Ballston Commons"
+  description="Submit exterior changes for First Ballston Commons with the Architectural Review application and guidelines for updates and repairs."
+  canonical="/architectural-review"
+>
+  <NavBar />
+
+  <section class="relative hero-image text-white overflow-hidden pt-20">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
+      <div class="max-w-3xl space-y-4">
+        <span class="inline-flex items-center gap-2 bg-white/85 text-primary font-bold uppercase tracking-[0.14em] text-xs px-3 py-1 rounded-full shadow">
+          Guidance
+        </span>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Architectural Review</h1>
+        <p class="text-lg text-white/90">
+          How to get exterior changes approved while keeping First Ballston Commons cohesive and well maintained.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main class="flex-grow bg-background-light">
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid gap-8 lg:grid-cols-[2fr_1fr]">
+          <article class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 md:p-10 space-y-10">
+            <section class="space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-semibold">1</span>
+                Understanding the process
+              </h3>
+              <div class="space-y-4 text-slate-700 leading-relaxed">
+                <p class="m-0">
+                  To keep First Ballston Commons cohesive, exterior changes must be reviewed and approved by the Architectural Review Committee before work begins.
+                </p>
+                <p class="m-0">This includes, but is not limited to:</p>
+                <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                  <li>Window or sliding door replacements (including trim).</li>
+                  <li>Front door or storm door changes.</li>
+                  <li>Painting shutters, doors, or trim a new color.</li>
+                  <li>Landscaping or hardscaping that changes the front yard.</li>
+                  <li>Deck, patio, fence, or handrail construction or repair.</li>
+                </ul>
+                <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-xl text-sm text-slate-700">
+                  <strong class="block text-slate-900 mb-1">Note</strong>
+                  Routine maintenance that keeps the same appearance (for example, repainting with an already approved color) usually does not need a full review. If you are unsure, please ask before starting.
+                </div>
+              </div>
+            </section>
+
+            <section class="space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-semibold">2</span>
+                Submit your request
+              </h3>
+              <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-4">
+                <p class="text-slate-700 leading-relaxed m-0">
+                  Ready to start your project? Download the Architectural Approval Form, complete every section, add samples or brochures, and send it to the association management.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a
+                    class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+                    href="/assets/architectural-approval-form.pdf"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span class="material-symbols-outlined text-base">download</span>
+                    Download request form
+                  </a>
+                  <a
+                    class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 transition"
+                    href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span class="material-symbols-outlined text-base">send</span>
+                    Email application
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <section class="space-y-4" id="approved-colors">
+              <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">Approved Front Door Colors</h3>
+              <p class="text-slate-700 leading-relaxed mb-6">
+                The following Benjamin Moore colors have been pre-approved for front doors. Submit an application for record keeping when selecting one of these hues.
+              </p>
+              <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {approvedColors.map((color) => (
+                  <a
+                    href={color.link}
+                    class="block h-full bg-white border border-slate-200 rounded-xl shadow-sm hover:-translate-y-1 hover:shadow-lg transition text-slate-900"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <div class="h-36 w-full rounded-t-xl" style={`background: ${color.swatch}`}></div>
+                    <div class="p-4 space-y-1">
+                      <h3 class="text-base font-semibold">{color.name}</h3>
+                      <div class="text-slate-500 text-sm">Benjamin Moore · Color Preview</div>
+                      <div class="font-semibold">{color.code}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </section>
+          </article>
+
+          <aside class="space-y-6">
+            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                  <span class="material-symbols-outlined text-xl">help</span>
+                </span>
+                <div>
+                  <h3 class="text-lg font-semibold m-0">Need help?</h3>
+                  <p class="text-sm text-slate-600 m-0">Ask questions before starting work</p>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <a
+                  class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+                  href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="material-symbols-outlined text-base">forum</span>
+                  Contact community manager
+                </a>
+                <a
+                  class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 transition"
+                  href="/assets/architectural-approval-form.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="material-symbols-outlined text-base">picture_as_pdf</span>
+                  Architectural form
+                </a>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-50 border border-dashed border-slate-300">
+                <h4 class="text-sm font-semibold text-slate-900 mb-1">Tip for faster approvals</h4>
+                <p class="text-sm text-slate-600">
+                  Include clear photos, paint swatches, and contractor details in a single packet so the committee has everything it needs on the first review.
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

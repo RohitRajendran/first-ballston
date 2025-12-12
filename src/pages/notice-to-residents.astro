@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout
+  title="Notice to Residents – First Ballston Commons"
+  description="Stay informed on First Ballston Commons reminders about parking, trash, recycling, pets, and community safety."
+  canonical="/notice-to-residents"
+>
+  <NavBar />
+
+  <section class="relative hero-image text-white overflow-hidden pt-20">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 bg-white/80 text-primary font-bold uppercase tracking-[0.14em] text-xs px-3 py-1 rounded-full shadow">
+          Community
+        </span>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mt-4 drop-shadow">
+          Notice to Residents
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <main class="flex-grow bg-background-light">
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <article class="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden">
+          <div class="p-6 md:p-10 space-y-10">
+            <section class="space-y-4 border-b border-slate-200 pb-8">
+              <h2 class="text-3xl font-bold text-slate-900">Dear Residents of First Ballston Commons</h2>
+              <p class="text-lg text-slate-600">
+                Our community is home to a wide range of households, including young families, young adults, and empty-nesters. We also have a mix of owner-occupied and renter-occupied homes. We seek to maintain a beautiful, friendly community, and we ask that everyone do their part.
+              </p>
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
+                <p class="italic text-slate-700 m-0">
+                  Please share these reminders with all household members and guests.
+                </p>
+              </div>
+            </section>
+
+            <section id="parking" class="space-y-6 border-b border-slate-200 pb-8 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-green-100 text-green-600 text-2xl">
+                  <span class="material-symbols-outlined leading-none">directions_car</span>
+                </span>
+                <h2 class="text-2xl font-semibold text-slate-900 m-0">Parking reminders</h2>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
+                  <h3 class="text-lg font-semibold text-slate-900 mb-2">Assigned parking</h3>
+                  <p class="text-sm text-slate-700 mb-0">
+                    <strong>Park where assigned</strong> — every home has one reserved space. Parking in another spot may result in towing.
+                  </p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
+                  <h3 class="text-lg font-semibold text-slate-900 mb-2">Street parking</h3>
+                  <p class="text-sm text-slate-700 mb-0">
+                    Limited street parking is available. Apply for a Residential Parking Permit from the county at
+                    <a class="text-primary underline" href="https://www.arlingtonva.us/Government/Programs/Transportation/Parking/Residential-Permit-Parking" target="_blank" rel="noopener">arlingtonva.us/Parking/Residential-Permit-Parking</a>.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="noise" class="space-y-4 border-b border-slate-200 pb-8">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 text-slate-600 text-2xl">
+                  <span class="material-symbols-outlined leading-none">volume_up</span>
+                </span>
+                <h2 class="text-2xl font-semibold text-slate-900 m-0">Noise reminders</h2>
+              </div>
+              <p class="text-slate-500 text-sm italic">Noise sometimes becomes a problem, especially in good weather.</p>
+              <ul class="list-none space-y-3">
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-blue-500 text-2xl leading-none">check_circle</span>
+                  <span class="text-slate-700">Shared walls transfer sound; please keep music and TV volumes reasonable.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-blue-500 text-2xl leading-none">check_circle</span>
+                  <span class="text-slate-700">Townhouse layouts amplify even mild conversations. Take chats indoors late at night.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-red-500 text-2xl leading-none">warning</span>
+                  <span class="text-red-700">Arlington County prohibits loud outdoor noise after 9:00 p.m.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-red-500 text-2xl leading-none">attach_money</span>
+                  <span class="text-red-700">County fines for excessive noise start at $100.</span>
+                </li>
+              </ul>
+            </section>
+
+            <section id="trash-etiquette" class="space-y-6 border-b border-slate-200 pb-8">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-100 text-indigo-600 text-2xl">
+                  <span class="material-symbols-outlined leading-none">delete_outline</span>
+                </span>
+                <h2 class="text-2xl font-semibold text-slate-900 m-0">Trash and recycling</h2>
+              </div>
+
+              <div class="bg-blue-50 border border-blue-100 rounded-xl p-6">
+                <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                  <div>
+                    <h4 class="text-lg font-bold text-blue-900 m-0">Trash day is Tuesday</h4>
+                    <p class="text-blue-700 text-sm m-0 mt-1">If Tuesday is a holiday, trash is collected on Wednesday.</p>
+                  </div>
+                  <div class="text-left md:text-right">
+                    <p class="text-xs text-blue-700 uppercase font-semibold tracking-wide m-0">Put out after</p>
+                    <p class="text-lg font-bold text-blue-900 m-0">5pm Monday</p>
+                  </div>
+                  <div class="text-left md:text-right">
+                    <p class="text-xs text-blue-700 uppercase font-semibold tracking-wide m-0">Return before</p>
+                    <p class="text-lg font-bold text-blue-900 m-0">8am Wednesday</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-3 text-slate-700">
+                <p><strong>Containers:</strong> Use Arlington County carts only (black trash, blue recycling, brown yard waste).</p>
+                <p><strong>Labeling:</strong> Mark bins with your street address; unlabeled carts may be returned to the county.</p>
+                <p><strong>Timing:</strong> Set carts out after 5pm Monday and bring them in before 8am Wednesday.</p>
+                <p><strong>Damaged carts:</strong> Call <a class="text-primary underline" href="tel:703-228-5000">703-228-5000</a> for replacements.</p>
+                <p><strong>Excess trash:</strong> Use sturdy plastic bags sparingly to avoid attracting rodents.</p>
+                <p><strong>Prevent pests:</strong> Keep lids closed, secure trash, and do not move rat traps.</p>
+                <p>
+                  For recycling guidelines, visit
+                  <a class="text-primary underline" href="https://www.arlingtonva.us/Government/Programs/Trash-Recycling" target="_blank" rel="noopener">arlingtonva.us/Government/Programs/Trash-Recycling</a>.
+                </p>
+              </div>
+            </section>
+
+            <section class="space-y-4">
+              <h3 class="text-2xl font-bold text-slate-900">Questions or feedback?</h3>
+              <p class="text-slate-700 leading-relaxed">
+                Thank you for helping keep our neighborhood welcoming. For questions, contact the Board of Directors or the property manager through the resident portal.
+              </p>
+              <a
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+                href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="material-symbols-outlined text-base">login</span>
+                Resident portal
+              </a>
+            </section>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

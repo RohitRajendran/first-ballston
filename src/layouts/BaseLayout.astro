@@ -1,0 +1,50 @@
+---
+import '../styles/tailwind.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'First Ballston Commons – Arlington, VA',
+  description = 'Discover First Ballston Commons, a welcoming townhouse community near Ballston Metro with tree-lined streets, reserved parking, and easy access to Arlington favorites.',
+  canonical,
+} = Astro.props;
+
+const canonicalUrl = canonical
+  ? new URL(canonical, Astro.site ?? Astro.url.origin).toString()
+  : (Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : Astro.url.href);
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#137fec" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="First Ballston Commons" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content="https://firstballstoncommons.com/assets/banner.jpg" />
+    <meta property="og:image:alt" content="Townhomes along a tree-lined street in Ballston." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://firstballstoncommons.com/assets/banner.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
+const features = [
+  {
+    title: 'Metro accessible',
+    description: 'Orange and Silver lines put DC, Clarendon, and Ballston minutes away.',
+    icon: 'train',
+  },
+  {
+    title: 'Private patios',
+    description: 'Dedicated outdoor space for coffee, conversation, or winding down.',
+    icon: 'deck',
+  },
+  {
+    title: 'Low HOA fees',
+    description: 'Balanced community services without stretching your budget.',
+    icon: 'savings',
+  },
+];
+
+const locationHighlights = [
+  '10 minutes to Ronald Reagan Washington National Airport',
+  'Walkable to grocery stores, coffee shops, and playgrounds',
+  'In a top-rated Arlington Public Schools district',
+];
+---
+<BaseLayout>
+  <NavBar />
+
+  <section class="relative hero-image text-white overflow-hidden pt-20">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <div class="text-center md:max-w-3xl md:mx-auto flex flex-col items-center gap-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">First Ballston Commons</h1>
+        <p class="text-lg md:text-xl text-white/80 max-w-2xl">
+          Tree-lined streets, friendly neighbors, and quick access to Metro, parks, and the best of Arlington.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 pt-2">
+          <a
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+            href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="material-symbols-outlined text-base">mail</span>
+            Get in touch
+          </a>
+          <a
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/70 text-white font-semibold hover:bg-white/10 transition"
+            href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="material-symbols-outlined text-base">login</span>
+            Resident portal
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="flex-grow">
+    <section class="py-12">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="section-eyebrow">Community</div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">Welcome home</h2>
+        <p class="text-lg text-slate-600 mb-2">
+          First Ballston Commons is one of the oldest townhouse developments in Ballston. Our community of homeowners and renters enjoys reserved parking,
+          weekly trash removal, and professional grounds care by Blade Runners.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6 border-b border-slate-200 pb-4">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold">Community features</h2>
+          </div>
+        </div>
+        <div class="grid gap-4 md:grid-cols-3">
+          {features.map((feature) => (
+            <div class="feature-card" aria-label={feature.title}>
+              <div class="icon-circle mb-4">
+                <span class="material-symbols-outlined">{feature.icon}</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">{feature.title}</h3>
+              <p class="text-slate-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden grid md:grid-cols-2">
+          <div class="p-6 md:p-10 flex flex-col gap-4">
+            <div class="section-eyebrow">Neighborhood</div>
+            <h2 class="text-3xl font-bold">Ideally located</h2>
+            <p class="text-slate-600">
+              Minutes from Clarendon and Ballston, close to parks, restaurants, and everyday errands. Whether you're commuting to the Pentagon, DC, or Tysons, our central location keeps you connected.
+            </p>
+            <ul class="space-y-3 text-slate-800">
+              {locationHighlights.map((item) => (
+                <li class="flex gap-2 items-start">
+                  <span class="material-symbols-outlined text-primary">check_circle</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              class="text-primary font-semibold flex items-center gap-1"
+              href="https://maps.app.goo.gl/BEEJZGemwtjEsnYB9"
+              target="_blank"
+              rel="noopener"
+            >
+              Explore the neighborhood
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+          <a
+            class="block min-h-[300px] md:min-h-auto relative bg-slate-200"
+            href="https://maps.app.goo.gl/eq3hw4Smii7PwjjaA"
+            target="_blank"
+            rel="noopener"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA37rfSgW-Z4T883Z42Qzk4FSEn7lH4spkzviM_A1peLzeNKnrGb0AJisEwvl-TEx8AOYHWxycrAHiFs7RBTiw9E703_WR-XlxiERH0hptaSd4P2SCyi5xvUptB-wqu46tdGCVdW14S9KuU2YHx5ke_TwY-AQilvXyusveWl5pgrotnB8aznVjhSpbJ1li5Mndaf0PWUzATqrpFVMKbrHtxixMWij_PYMN2ZHPo7RgjNPrGvAzHH162RW-FAAf-KCRI25kdq0qxbrg');"
+            ></div>
+            <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+              <div class="bg-white p-3 rounded-lg shadow-lg flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">location_on</span>
+                <span class="text-xs font-bold text-slate-900">We are here</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
