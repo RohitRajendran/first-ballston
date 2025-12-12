@@ -38,73 +38,199 @@ import Footer from "../components/Footer.astro";
           <div class="space-y-10 p-6 md:p-10">
             <section class="space-y-4">
               <div class="flex items-center gap-3">
-                <h2 class="m-0 text-3xl font-bold">About First Ballston Commons</h2>
+                <h2 class="m-0 text-3xl font-bold">Welcome to First Ballston Commons</h2>
               </div>
-              <p class="text-lg text-slate-700">
-                First Ballston Commons is a residential townhouse community located in the Ballston
-                area of Arlington, Virginia. The neighborhood features multi-level brick townhomes
-                on a tree-lined street within a walkable, transit-oriented area.
+              <p class="text-lg text-slate-700 mb-6">
+                Nestled in the heart of Arlington, Virginia, First Ballston Commons is a vibrant
+                townhome community that perfectly balances urban convenience with neighborhood
+                charm. Our community is characterized by its friendly atmosphere, well-maintained
+                grounds, and engaged residents who take pride in their homes.
               </p>
-              <p class="text-lg text-slate-700">
-                Homeowners and renters alike enjoy friendly neighbors, reserved parking, weekly
-                trash removal, and professional grounds care provided by Blade Runners.
-              </p>
+              <div
+                class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-6 rounded-r-lg"
+              >
+                <p class="text-gray-700 dark:text-gray-300 italic">
+                  "A quiet, connected community with reserved parking, attentive upkeep, and
+                  neighbors who look out for each other."
+                </p>
+              </div>
             </section>
 
             <section class="space-y-4">
-              <h3 class="text-2xl font-bold text-slate-900">Getting around</h3>
+              <div class="flex items-center gap-3">
+                <span
+                  class="inline-flex h-12 w-12 items-center justify-center rounded-lg text-2xl text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/40"
+                >
+                  <span class="material-symbols-outlined leading-none">park</span>
+                </span>
+                <h2 class="m-0 text-2xl font-semibold text-slate-900">Community Background</h2>
+              </div>
+              <p class="mb-4 leading-relaxed text-slate-700">
+                Established in the mid-1980s, First Ballston Commons was designed to offer spacious
+                living within walking distance of the Ballston Metro corridor. The architecture
+                reflects a classic brick aesthetic that harmonizes with the historic character of
+                Arlington County while providing modern amenities.
+              </p>
               <p class="leading-relaxed text-slate-700">
-                We are roughly one mile from the Ballston Metro station on both the Orange and
-                Silver Lines, connecting to downtown DC, Rosslyn, Tysons, and beyond. Residents also
-                have quick access to I-66 and Route 50 for regional travel.
+                Over the decades, we have evolved into a diverse community of young professionals,
+                families, and long-term residents, creating a unique tapestry of experiences and
+                backgrounds.
               </p>
             </section>
 
             <section class="space-y-4">
-              <h3 class="text-2xl font-bold text-slate-900">Community highlights</h3>
-              <ul class="list-disc space-y-3 pl-5 text-slate-700">
-                <li>Private patios and reserved parking for every home.</li>
-                <li>Weekly trash and recycling pick-up to keep the block tidy.</li>
-                <li>Landscaping maintained by Blade Runners for consistent curb appeal.</li>
-                <li>
-                  Nearby parks, grocery stores, coffee shops, and playgrounds within walking
-                  distance.
+              <div class="flex items-center gap-3">
+                <span
+                  class="inline-flex h-12 w-12 items-center justify-center rounded-lg text-2xl bg-orange-100 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400"
+                >
+                  <span class="material-symbols-outlined leading-none">home</span>
+                </span>
+                <h2 class="m-0 text-2xl font-semibold text-slate-900">The Townhomes</h2>
+              </div>
+              <p class="leading-relaxed text-slate-700">
+                Our residences feature multi-level layouts, private patios, and reserved parking
+                spaces directly in front of each unit. The community takes pride in maintaining a
+                cohesive aesthetic while allowing for individual expression within our architectural
+                guidelines.
+              </p>
+            </section>
+
+            <section class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span
+                  class="inline-flex h-12 w-12 items-center justify-center rounded-lg text-2xl text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40"
+                >
+                  <span class="material-symbols-outlined leading-none">place</span>
+                </span>
+                <h2 class="m-0 text-2xl font-semibold text-slate-900">Location & Convenience</h2>
+              </div>
+              <p class="leading-relaxed text-slate-700">
+                First Ballston Commons is located in a well-connected part of Arlington with
+                convenient access to public transit, biking infrastructure, parks, schools,
+                libraries, and neighborhood amenities.
+              </p>
+              <ul class="list-none space-y-4 pl-0">
+                <li class="relative pl-6">
+                  <span class="absolute left-0 top-1 w-2 h-2 rounded-full bg-primary mt-1"></span>
+                  <strong class="text-gray-900 dark:text-white">Metro:</strong> The community is within
+                  walking distance of the Ballston–MU Metro Station on the Orange and Silver lines, providing
+                  direct access to Washington, D.C. and other areas of Northern Virginia.
+                </li>
+                <li class="relative pl-6">
+                  <span class="absolute left-0 top-1 w-2 h-2 rounded-full bg-primary mt-1"></span>
+                  <strong class="text-gray-900 dark:text-white">Bus Service:</strong> Several ART and
+                  Metrobus routes operate nearby along Wilson Boulevard and Fairfax Drive, offering regular
+                  service throughout Arlington and to surrounding neighborhoods.
+                </li>
+                <li class="relative pl-6">
+                  <span class="absolute left-0 top-1 w-2 h-2 rounded-full bg-primary mt-1"></span>
+                  <strong class="text-gray-900 dark:text-white">Biking and Trails:</strong> Residents
+                  have access to Arlington's bike network, including nearby connections to the Custis
+                  Trail, which links Ballston to Rosslyn and regional trail systems. Bike lanes and shared-use
+                  paths support both commuting and recreational cycling.
+                </li>
+                <li class="relative pl-6">
+                  <span class="absolute left-0 top-1 w-2 h-2 rounded-full bg-primary mt-1"></span>
+                  <strong class="text-gray-900 dark:text-white">Parks and Amenities:</strong><ul
+                    class="list-disc pl-5 mt-2 space-y-1"
+                  >
+                    <li>
+                      Quincy Park is a short walk from the community and includes open green space,
+                      athletic fields, courts, and a playground.
+                    </li>
+                    <li>
+                      Ballston Quarter is within walking distance and provides dining, retail,
+                      fitness options, and entertainment.
+                    </li>
+                    <li>
+                      Lubber Run Park, approximately 0.8 miles away, includes wooded trails, picnic
+                      areas, playgrounds, and the Lubber Run Amphitheater.
+                    </li>
+                  </ul>
+                </li>
+                <li class="relative pl-6">
+                  <span class="absolute left-0 top-1 w-2 h-2 rounded-full bg-primary mt-1"></span>
+                  <strong class="text-gray-900 dark:text-white">Library:</strong> Arlington's Central
+                  Library, located on Quincy Street near Quincy Park, is within walking distance and offers
+                  reading rooms, study and meeting spaces, public programs, and resources for all ages.
+                </li>
+                <li class="relative pl-6">
+                  <span class="absolute left-0 top-1 w-2 h-2 rounded-full bg-primary mt-1"></span>
+                  <strong class="text-gray-900 dark:text-white">Schools:</strong>
+                  <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <li>
+                      Ashlawn Elementary School is approximately 1.4 miles from the community.
+                    </li>
+                    <li>Swanson Middle School is approximately 1.3 miles away.</li>
+                    <li>
+                      Washington-Liberty High School is located about 0.3 miles from First Ballston
+                      Commons.
+                    </li>
+                  </ul>
                 </li>
               </ul>
+
+              <div
+                class="w-full h-80 bg-gray-200 dark:bg-gray-700 rounded-lg relative overflow-hidden border border-gray-300 dark:border-gray-600 shadow-sm"
+              >
+                <iframe
+                  allowfullscreen=""
+                  class="absolute inset-0 w-full h-full"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12423.837894364074!2d-77.12195742417482!3d38.88085429184518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b43a96c34f71%3A0x5e9553759715560a!2sBallston%2C%20Arlington%2C%20VA!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                  style="border:0;"></iframe>
+              </div>
             </section>
 
             <section class="space-y-4">
-              <h3 class="text-2xl font-bold text-slate-900">Association and contact</h3>
+              <div class="flex items-center gap-3">
+                <span
+                  class="inline-flex h-12 w-12 items-center justify-center rounded-lg text-2xl bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400"
+                >
+                  <span class="material-symbols-outlined leading-none">groups</span>
+                </span>
+                <h2 class="m-0 text-2xl font-semibold text-slate-900">Community Association</h2>
+              </div>
               <p class="leading-relaxed text-slate-700">
-                Exterior changes require Architectural Review approval to keep our look cohesive.
-                Residents can find forms, contacts, and meeting updates through the resident portal.
+                First Ballston Commons is governed by a Homeowners Association (HOA) Board comprised
+                of volunteer residents. The Board meets regularly to discuss community maintenance,
+                financials, and improvement initiatives.
               </p>
-              <div class="flex flex-wrap gap-3">
-                <a
-                  class="bg-primary hover:bg-primary-dark inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-white shadow transition"
+              <p class="leading-relaxed text-slate-700">
+                The community is professionally managed by <strong
+                  >Capital Property Management</strong
+                >, which supports day-to-day operations, homeowner communications, and coordination
+                of services on behalf of the Association.
+              </p>
+              <p class="leading-relaxed text-slate-700">
+                Residents are encouraged to attend meetings, stay informed, and participate in
+                community activities and governance.
+              </p>
+            </section>
+
+            <div
+              class="mt-12 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-100 dark:border-gray-700 text-center"
+            >
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Questions about the community? Feel free to reach out via the <a
+                  class="text-primary hover:underline"
                   href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
                   target="_blank"
-                  rel="noopener"
-                >
-                  <span class="material-symbols-outlined text-base">login</span>
-                  Resident portal
-                </a>
-                <a
-                  class="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2 font-semibold text-slate-800 transition hover:bg-slate-50"
+                  rel="noopener">Resident Portal</a
+                > or contact our <a
+                  class="text-primary hover:underline"
                   href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
                   target="_blank"
-                  rel="noopener"
-                >
-                  <span class="material-symbols-outlined text-base">mail</span>
-                  Contact the board
-                </a>
-              </div>
-            </section>
+                  rel="noopener">management office</a
+                >.
+              </p>
+            </div>
           </div>
         </article>
       </div>
     </section>
   </main>
-
-  <Footer />
 </BaseLayout>
+
+<Footer />
