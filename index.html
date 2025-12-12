@@ -80,30 +80,46 @@
                 >About the Community</a
               >
             </li>
-            <li>
-              <a
-                class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 lg:hover:bg-transparent lg:p-0 lg:hover:text-primary"
-                href="notice-to-residents.html"
-                >Notice to Residents</a
+            <li class="relative">
+              <button
+                id="residents-toggle"
+                type="button"
+                class="flex items-center gap-1 w-full py-2 px-3 text-slate-700 font-semibold rounded hover:bg-slate-100 lg:hover:bg-transparent lg:p-0 lg:font-medium lg:hover:text-primary"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="residents-menu"
               >
-            </li>
-            <li>
-              <a
-                class="block py-2 px-3 text-slate-700 rounded hover:bg-slate-100 lg:hover:bg-transparent lg:p-0 lg:hover:text-primary"
-                href="architectural-review.html"
-                >Architectural Review</a
+                For Residents
+                <span class="material-symbols-outlined text-base">expand_more</span>
+              </button>
+              <div
+                id="residents-menu"
+                class="hidden mt-2 lg:absolute lg:left-0 lg:mt-3 lg:w-64"
               >
-            </li>
-            <li class="mt-2 lg:mt-0 lg:ml-2">
-              <a
-                class="inline-flex items-center gap-1 w-full justify-center px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition lg:w-auto"
-                href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="material-symbols-outlined text-base">login</span>
-                Resident Portal
-              </a>
+                <div
+                  class="rounded-xl border border-slate-200 bg-white shadow-lg shadow-slate-200/70 p-2 space-y-1"
+                >
+                  <a
+                    class="block py-2 px-3 text-slate-700 rounded-lg hover:bg-slate-100"
+                    href="notice-to-residents.html"
+                    >Notice to Residents</a
+                  >
+                  <a
+                    class="block py-2 px-3 text-slate-700 rounded-lg hover:bg-slate-100"
+                    href="architectural-review.html"
+                    >Architectural Review</a
+                  >
+                  <a
+                    class="inline-flex items-center gap-1 w-full py-2 px-3 text-slate-700 rounded-lg hover:bg-slate-100"
+                    href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Resident Portal
+                    <span class="material-symbols-outlined text-base">open_in_new</span>
+                  </a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -344,18 +360,46 @@
       (() => {
         const toggle = document.getElementById("nav-toggle");
         const menu = document.getElementById("nav-menu");
+        const residentsToggle = document.getElementById("residents-toggle");
+        const residentsMenu = document.getElementById("residents-menu");
         if (!toggle || !menu) return;
+
+        const setResidentsOpen = (isOpen) => {
+          if (!residentsMenu || !residentsToggle) return;
+          residentsMenu.classList.toggle("hidden", !isOpen);
+          residentsToggle.setAttribute("aria-expanded", isOpen.toString());
+        };
 
         const setOpen = (open) => {
           const shouldOpen = open || window.innerWidth >= 1024;
           menu.classList.toggle("hidden", !shouldOpen);
           toggle.setAttribute("aria-expanded", shouldOpen.toString());
+          if (!shouldOpen) setResidentsOpen(false);
         };
 
         toggle.addEventListener("click", () => {
           const isOpen = menu.classList.contains("hidden");
           setOpen(isOpen);
         });
+
+        if (residentsToggle && residentsMenu) {
+          residentsToggle.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const isOpen = !residentsMenu.classList.contains("hidden");
+            setResidentsOpen(!isOpen);
+          });
+
+          document.addEventListener("click", (event) => {
+            if (
+              residentsMenu.classList.contains("hidden") ||
+              residentsMenu.contains(event.target) ||
+              residentsToggle.contains(event.target)
+            ) {
+              return;
+            }
+            setResidentsOpen(false);
+          });
+        }
 
         const currentYear = new Date().getFullYear();
         document.querySelectorAll("[data-year]").forEach((el) => {
