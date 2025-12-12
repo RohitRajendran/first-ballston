@@ -6,10 +6,9 @@ Static recreation of the First Ballston Commons site using local Bootstrap asset
 - `index.html` – Welcome/hero, community overview, resident quick links.
 - `approved-colors.html` – Color swatches and links to Benjamin Moore references.
 - `notice-to-residents.html` – Community reminders and rules.
-- `deed-and-condo-docs.html` – Local PDFs and image references for HOA documents.
 - `style.css` – Light overrides for typography and cards.
 - `bootstrap.min.css` – Local Bootstrap theme.
-- `assets/` – Images and PDFs (deed, bylaws, covenants, forms, approved colors).
+- `assets/` – Images and PDFs (bylaws, covenants, forms, approved colors).
 
 ## Links
 - Resident portal: https://engage.goenumerate.com/s/firstballstoncommons/home.php

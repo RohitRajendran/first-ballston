@@ -1,9 +1,12 @@
 {
   "version": "0.2",
-  "ignorePaths": ["bootstrap.min.css"],
+  "ignorePaths": [],
   "dictionaryDefinitions": [],
   "dictionaries": [],
-  "words": ["Ballston"],
+  "words": [
+    "Ballston",
+    "Townhomes"
+  ],
   "ignoreWords": [],
   "import": []
 }
