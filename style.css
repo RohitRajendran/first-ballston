@@ -2,10 +2,6 @@
   --primary: #137fec;
 }
 
-body {
-  letter-spacing: 0.01em;
-}
-
 .hero-image {
   background: linear-gradient(180deg, rgba(16, 25, 34, 0.55), rgba(16, 25, 34, 0.75)), url("assets/banner.jpg") center/cover no-repeat;
 }
@@ -43,7 +39,3 @@ body {
   box-shadow: 0 16px 28px rgba(15, 23, 42, 0.12);
 }
 
-.neighborhood-image {
-  background: linear-gradient(180deg, rgba(19, 127, 236, 0.2), rgba(19, 127, 236, 0.05)), url("assets/approved-colors-scaled.jpg") center/cover no-repeat;
-  min-height: 320px;
-}
