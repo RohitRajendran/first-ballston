@@ -11,11 +11,11 @@ import Footer from "../components/Footer.astro";
 >
   <NavBar />
 
-  <section class="relative hero-image text-white overflow-hidden pt-20">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent"></div>
-    <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
+  <section class="hero-image relative overflow-hidden pt-20 text-white">
+    <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/25 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
       <div class="max-w-3xl space-y-4">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Notice to Residents</h1>
+        <h1 class="text-4xl leading-tight font-extrabold md:text-5xl">Notice to Residents</h1>
         <p class="text-lg text-white/90">
           Keeping First Ballston Commons welcoming for all residents and guests.
         </p>
@@ -23,11 +23,11 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
-  <main class="flex-grow bg-background-light">
+  <main class="bg-background-light grow">
     <section class="py-12">
-      <div class="max-w-6xl mx-auto px-4">
-        <article class="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden">
-          <div class="p-6 md:p-10 space-y-10">
+      <div class="mx-auto max-w-6xl px-4">
+        <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+          <div class="space-y-10 p-6 md:p-10">
             <section class="space-y-4 border-b border-slate-200 pb-8">
               <h2 class="text-3xl font-bold text-slate-900">
                 Dear Residents of First Ballston Commons
@@ -38,33 +38,33 @@ import Footer from "../components/Footer.astro";
                 homes. We seek to maintain a beautiful, friendly community, and we ask that everyone
                 do their part.
               </p>
-              <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
-                <p class="italic text-slate-700 m-0">
+              <div class="rounded-r-xl border-l-4 border-blue-500 bg-blue-50 p-4">
+                <p class="m-0 text-slate-700 italic">
                   Please share these reminders with all household members and guests.
                 </p>
               </div>
             </section>
 
-            <section id="parking" class="space-y-6 border-b border-slate-200 pb-8 mb-6">
+            <section id="parking" class="mb-6 space-y-6 border-b border-slate-200 pb-8">
               <div class="flex items-center gap-3">
                 <span
-                  class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-green-100 text-green-600 text-2xl"
+                  class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 text-2xl text-green-600"
                 >
                   <span class="material-symbols-outlined leading-none">directions_car</span>
                 </span>
-                <h2 class="text-2xl font-semibold text-slate-900 m-0">Parking reminders</h2>
+                <h2 class="m-0 text-2xl font-semibold text-slate-900">Parking reminders</h2>
               </div>
-              <div class="grid md:grid-cols-2 gap-4">
-                <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
-                  <h3 class="text-lg font-semibold text-slate-900 mb-2">Assigned parking</h3>
-                  <p class="text-sm text-slate-700 mb-0">
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-lg border border-slate-200 bg-slate-50 p-5">
+                  <h3 class="mb-2 text-lg font-semibold text-slate-900">Assigned parking</h3>
+                  <p class="mb-0 text-sm text-slate-700">
                     <strong>Park where assigned</strong> — every home has one reserved space. Parking
                     in another spot may result in towing.
                   </p>
                 </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
-                  <h3 class="text-lg font-semibold text-slate-900 mb-2">Street parking</h3>
-                  <p class="text-sm text-slate-700 mb-0">
+                <div class="rounded-lg border border-slate-200 bg-slate-50 p-5">
+                  <h3 class="mb-2 text-lg font-semibold text-slate-900">Street parking</h3>
+                  <p class="mb-0 text-sm text-slate-700">
                     Limited street parking is available. Apply for a Residential Parking Permit from
                     the county at
                     <a
@@ -81,18 +81,18 @@ import Footer from "../components/Footer.astro";
             <section id="noise" class="space-y-4 border-b border-slate-200 pb-8">
               <div class="flex items-center gap-3">
                 <span
-                  class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 text-slate-600 text-2xl"
+                  class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-2xl text-slate-600"
                 >
                   <span class="material-symbols-outlined leading-none">volume_up</span>
                 </span>
-                <h2 class="text-2xl font-semibold text-slate-900 m-0">Noise reminders</h2>
+                <h2 class="m-0 text-2xl font-semibold text-slate-900">Noise reminders</h2>
               </div>
-              <p class="text-slate-500 text-sm italic">
+              <p class="text-sm text-slate-500 italic">
                 Noise sometimes becomes a problem, especially in good weather.
               </p>
               <ul class="list-none space-y-3">
                 <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-blue-500 text-2xl leading-none"
+                  <span class="material-symbols-outlined text-2xl leading-none text-blue-500"
                     >check_circle</span
                   >
                   <span class="text-slate-700"
@@ -100,7 +100,7 @@ import Footer from "../components/Footer.astro";
                   >
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-blue-500 text-2xl leading-none"
+                  <span class="material-symbols-outlined text-2xl leading-none text-blue-500"
                     >check_circle</span
                   >
                   <span class="text-slate-700"
@@ -109,7 +109,7 @@ import Footer from "../components/Footer.astro";
                   >
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-red-500 text-2xl leading-none"
+                  <span class="material-symbols-outlined text-2xl leading-none text-red-500"
                     >warning</span
                   >
                   <span class="text-red-700"
@@ -117,7 +117,7 @@ import Footer from "../components/Footer.astro";
                   >
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-red-500 text-2xl leading-none"
+                  <span class="material-symbols-outlined text-2xl leading-none text-red-500"
                     >attach_money</span
                   >
                   <span class="text-red-700">County fines for excessive noise start at $100.</span>
@@ -128,32 +128,32 @@ import Footer from "../components/Footer.astro";
             <section id="trash-etiquette" class="space-y-6 border-b border-slate-200 pb-8">
               <div class="flex items-center gap-3">
                 <span
-                  class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-100 text-indigo-600 text-2xl"
+                  class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-100 text-2xl text-indigo-600"
                 >
                   <span class="material-symbols-outlined leading-none">delete_outline</span>
                 </span>
-                <h2 class="text-2xl font-semibold text-slate-900 m-0">Trash and recycling</h2>
+                <h2 class="m-0 text-2xl font-semibold text-slate-900">Trash and recycling</h2>
               </div>
 
-              <div class="bg-blue-50 border border-blue-100 rounded-xl p-6">
+              <div class="rounded-xl border border-blue-100 bg-blue-50 p-6">
                 <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                   <div>
-                    <h4 class="text-lg font-bold text-blue-900 m-0">Trash day is Tuesday</h4>
-                    <p class="text-blue-700 text-sm m-0 mt-1">
+                    <h4 class="m-0 text-lg font-bold text-blue-900">Trash day is Tuesday</h4>
+                    <p class="m-0 mt-1 text-sm text-blue-700">
                       If Tuesday is a holiday, trash is collected on Wednesday.
                     </p>
                   </div>
                   <div class="text-left md:text-right">
-                    <p class="text-xs text-blue-700 uppercase font-semibold tracking-wide m-0">
+                    <p class="m-0 text-xs font-semibold tracking-wide text-blue-700 uppercase">
                       Put out after
                     </p>
-                    <p class="text-lg font-bold text-blue-900 m-0">5pm Monday</p>
+                    <p class="m-0 text-lg font-bold text-blue-900">5pm Monday</p>
                   </div>
                   <div class="text-left md:text-right">
-                    <p class="text-xs text-blue-700 uppercase font-semibold tracking-wide m-0">
+                    <p class="m-0 text-xs font-semibold tracking-wide text-blue-700 uppercase">
                       Return before
                     </p>
-                    <p class="text-lg font-bold text-blue-900 m-0">8am Wednesday</p>
+                    <p class="m-0 text-lg font-bold text-blue-900">8am Wednesday</p>
                   </div>
                 </div>
               </div>
@@ -199,12 +199,12 @@ import Footer from "../components/Footer.astro";
 
             <section class="space-y-4">
               <h3 class="text-2xl font-bold text-slate-900">Questions or feedback?</h3>
-              <p class="text-slate-700 leading-relaxed">
+              <p class="leading-relaxed text-slate-700">
                 Thank you for helping keep our neighborhood welcoming. For questions, contact the
                 Board of Directors or the property manager through the resident portal.
               </p>
               <a
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+                class="bg-primary hover:bg-primary-dark inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-white shadow transition"
                 href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
                 target="_blank"
                 rel="noopener"

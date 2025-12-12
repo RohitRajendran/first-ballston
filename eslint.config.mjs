@@ -4,7 +4,6 @@ import pluginAstro from "eslint-plugin-astro";
 import pluginImport from "eslint-plugin-import";
 import pluginSecurity from "eslint-plugin-security";
 import pluginSimpleImportSort from "eslint-plugin-simple-import-sort";
-import pluginTailwind from "eslint-plugin-tailwindcss";
 import pluginUnicorn from "eslint-plugin-unicorn";
 import prettier from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
@@ -49,7 +48,6 @@ export default [
     },
     plugins: {
       "@typescript-eslint": tseslint.plugin,
-      tailwindcss: pluginTailwind,
       import: pluginImport,
       "simple-import-sort": pluginSimpleImportSort,
       unicorn: pluginUnicorn,
@@ -58,7 +56,6 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
-      ...pluginTailwind.configs.recommended.rules,
       ...pluginUnicorn.configs.recommended.rules,
       ...pluginSecurity.configs.recommended.rules,
       // handled by simple-import-sort

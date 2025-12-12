@@ -11,11 +11,11 @@ import Footer from "../components/Footer.astro";
 >
   <NavBar />
 
-  <section class="relative hero-image text-white overflow-hidden pt-20">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent"></div>
-    <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
+  <section class="hero-image relative overflow-hidden pt-20 text-white">
+    <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/25 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
       <div class="max-w-3xl space-y-4">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">About the Community</h1>
+        <h1 class="text-4xl leading-tight font-extrabold md:text-5xl">About the Community</h1>
         <p class="text-lg text-white/90">
           Experience the perfect blend of urban convenience and neighborhood charm.
         </p>
@@ -23,14 +23,14 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
-  <main class="flex-grow bg-background-light">
+  <main class="bg-background-light grow">
     <section class="py-12">
-      <div class="max-w-6xl mx-auto px-4">
-        <article class="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden">
-          <div class="p-6 md:p-10 space-y-10">
+      <div class="mx-auto max-w-6xl px-4">
+        <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+          <div class="space-y-10 p-6 md:p-10">
             <section class="space-y-4">
               <div class="flex items-center gap-3">
-                <h2 class="text-3xl font-bold m-0">About First Ballston Commons</h2>
+                <h2 class="m-0 text-3xl font-bold">About First Ballston Commons</h2>
               </div>
               <p class="text-lg text-slate-700">
                 First Ballston Commons is a residential townhouse community located in the Ballston
@@ -45,7 +45,7 @@ import Footer from "../components/Footer.astro";
 
             <section class="space-y-4">
               <h3 class="text-2xl font-bold text-slate-900">Getting around</h3>
-              <p class="text-slate-700 leading-relaxed">
+              <p class="leading-relaxed text-slate-700">
                 We are roughly one mile from the Ballston Metro station on both the Orange and
                 Silver Lines, connecting to downtown DC, Rosslyn, Tysons, and beyond. Residents also
                 have quick access to I-66 and Route 50 for regional travel.
@@ -54,7 +54,7 @@ import Footer from "../components/Footer.astro";
 
             <section class="space-y-4">
               <h3 class="text-2xl font-bold text-slate-900">Community highlights</h3>
-              <ul class="list-disc pl-5 space-y-3 text-slate-700">
+              <ul class="list-disc space-y-3 pl-5 text-slate-700">
                 <li>Private patios and reserved parking for every home.</li>
                 <li>Weekly trash and recycling pick-up to keep the block tidy.</li>
                 <li>Landscaping maintained by Blade Runners for consistent curb appeal.</li>
@@ -67,13 +67,13 @@ import Footer from "../components/Footer.astro";
 
             <section class="space-y-4">
               <h3 class="text-2xl font-bold text-slate-900">Association and contact</h3>
-              <p class="text-slate-700 leading-relaxed">
+              <p class="leading-relaxed text-slate-700">
                 Exterior changes require Architectural Review approval to keep our look cohesive.
                 Residents can find forms, contacts, and meeting updates through the resident portal.
               </p>
               <div class="flex flex-wrap gap-3">
                 <a
-                  class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+                  class="bg-primary hover:bg-primary-dark inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-white shadow transition"
                   href="https://engage.goenumerate.com/s/firstballstoncommons/home.php"
                   target="_blank"
                   rel="noopener"
@@ -82,7 +82,7 @@ import Footer from "../components/Footer.astro";
                   Resident portal
                 </a>
                 <a
-                  class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 transition"
+                  class="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2 font-semibold text-slate-800 transition hover:bg-slate-50"
                   href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
                   target="_blank"
                   rel="noopener"

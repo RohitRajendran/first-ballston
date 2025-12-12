@@ -122,11 +122,11 @@ const approvedColors = [
 >
   <NavBar />
 
-  <section class="relative hero-image text-white overflow-hidden pt-20">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent"></div>
-    <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
+  <section class="hero-image relative overflow-hidden pt-20 text-white">
+    <div class="absolute inset-0 bg-linear-to-t from-black/60 via-black/25 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
       <div class="max-w-3xl space-y-4">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Architectural Review</h1>
+        <h1 class="text-4xl leading-tight font-extrabold md:text-5xl">Architectural Review</h1>
         <p class="text-lg text-white/90">
           How to get exterior changes approved while keeping First Ballston Commons cohesive and
           well maintained.
@@ -135,37 +135,37 @@ const approvedColors = [
     </div>
   </section>
 
-  <main class="flex-grow bg-background-light">
+  <main class="bg-background-light grow">
     <section class="py-12">
-      <div class="max-w-6xl mx-auto px-4">
+      <div class="mx-auto max-w-6xl px-4">
         <div class="grid gap-8 lg:grid-cols-[2fr_1fr]">
           <article
-            class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 md:p-10 space-y-10"
+            class="space-y-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-10"
           >
             <section class="space-y-4">
-              <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <h3 class="mb-4 flex items-center gap-3 text-2xl font-bold text-slate-900">
                 <span
-                  class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-semibold"
+                  class="bg-primary flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold text-white"
                   >1</span
                 >
                 Understanding the process
               </h3>
-              <div class="space-y-4 text-slate-700 leading-relaxed">
+              <div class="space-y-4 leading-relaxed text-slate-700">
                 <p class="m-0">
                   To keep First Ballston Commons cohesive, exterior changes must be reviewed and
                   approved by the Architectural Review Committee before work begins.
                 </p>
                 <p class="m-0">This includes, but is not limited to:</p>
-                <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                <ul class="list-disc space-y-2 pl-6 text-slate-700">
                   <li>Window or sliding door replacements (including trim)</li>
                   <li>Front door or storm door changes</li>
                   <li>Painting shutters, doors, or trim a new color</li>
                   <li>Fence replacement</li>
                 </ul>
                 <div
-                  class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-xl text-sm text-slate-700"
+                  class="border-primary rounded-r-xl border-l-4 bg-blue-50 p-4 text-sm text-slate-700"
                 >
-                  <strong class="block text-slate-900 mb-1">Note</strong>
+                  <strong class="mb-1 block text-slate-900">Note</strong>
                   Routine maintenance that keeps the same appearance (for example, repainting with an
                   already approved color) usually does not need a full review. If you are unsure, please
                   ask before starting.
@@ -174,22 +174,22 @@ const approvedColors = [
             </section>
 
             <section class="space-y-4">
-              <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <h3 class="mb-4 flex items-center gap-3 text-2xl font-bold text-slate-900">
                 <span
-                  class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-semibold"
+                  class="bg-primary flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold text-white"
                   >2</span
                 >
                 Submit your request
               </h3>
-              <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-4">
-                <p class="text-slate-700 leading-relaxed m-0">
+              <div class="space-y-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                <p class="m-0 leading-relaxed text-slate-700">
                   Ready to start your project? Download the Architectural Approval Form, complete
                   every section, add samples or brochures, and send it to the association
                   management.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3">
+                <div class="flex flex-col gap-3 sm:flex-row">
                   <a
-                    class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+                    class="bg-primary hover:bg-primary-dark inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-3 font-semibold text-white shadow transition"
                     href="/assets/architectural-approval-form.pdf"
                     target="_blank"
                     rel="noopener"
@@ -198,7 +198,7 @@ const approvedColors = [
                     Download request form
                   </a>
                   <a
-                    class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 transition"
+                    class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-slate-200 px-4 py-3 font-semibold text-slate-800 transition hover:bg-slate-50"
                     href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
                     target="_blank"
                     rel="noopener"
@@ -211,10 +211,10 @@ const approvedColors = [
             </section>
 
             <section class="space-y-4" id="approved-colors">
-              <h3 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <h3 class="mb-4 flex items-center gap-3 text-2xl font-bold text-slate-900">
                 Approved Front Door Colors
               </h3>
-              <p class="text-slate-700 leading-relaxed mb-6">
+              <p class="mb-6 leading-relaxed text-slate-700">
                 The following Benjamin Moore colors have been pre-approved for front doors. Submit
                 an application for record keeping when selecting one of these hues.
               </p>
@@ -223,14 +223,14 @@ const approvedColors = [
                   approvedColors.map((color) => (
                     <a
                       href={color.link}
-                      class="block h-full bg-white border border-slate-200 rounded-xl shadow-sm hover:-translate-y-1 hover:shadow-lg transition text-slate-900"
+                      class="block h-full rounded-xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                       target="_blank"
                       rel="noopener"
                     >
                       <div class="h-36 w-full rounded-t-xl" style={`background: ${color.swatch}`} />
-                      <div class="p-4 space-y-1">
+                      <div class="space-y-1 p-4">
                         <h3 class="text-base font-semibold">{color.name}</h3>
-                        <div class="text-slate-500 text-sm">Benjamin Moore · Color Preview</div>
+                        <div class="text-sm text-slate-500">Benjamin Moore · Color Preview</div>
                         <div class="font-semibold">{color.code}</div>
                       </div>
                     </a>
@@ -241,21 +241,21 @@ const approvedColors = [
           </article>
 
           <aside class="space-y-6">
-            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 space-y-4">
+            <div class="space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div class="flex items-center gap-3">
                 <span
-                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary"
+                  class="bg-primary/10 text-primary inline-flex h-10 w-10 items-center justify-center rounded-full"
                 >
                   <span class="material-symbols-outlined text-xl">help</span>
                 </span>
                 <div>
-                  <h3 class="text-lg font-semibold m-0">Need help?</h3>
-                  <p class="text-sm text-slate-600 m-0">Ask questions before starting work</p>
+                  <h3 class="m-0 text-lg font-semibold">Need help?</h3>
+                  <p class="m-0 text-sm text-slate-600">Ask questions before starting work</p>
                 </div>
               </div>
               <div class="space-y-3">
                 <a
-                  class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-dark transition"
+                  class="bg-primary hover:bg-primary-dark flex items-center justify-center gap-2 rounded-lg px-4 py-3 font-semibold text-white shadow transition"
                   href="https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
                   target="_blank"
                   rel="noopener"
@@ -264,7 +264,7 @@ const approvedColors = [
                   Contact community manager
                 </a>
                 <a
-                  class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 transition"
+                  class="flex items-center justify-center gap-2 rounded-lg border border-slate-200 px-4 py-3 font-semibold text-slate-800 transition hover:bg-slate-50"
                   href="/assets/architectural-approval-form.pdf"
                   target="_blank"
                   rel="noopener"
@@ -273,8 +273,8 @@ const approvedColors = [
                   Architectural form
                 </a>
               </div>
-              <div class="p-4 rounded-xl bg-slate-50 border border-dashed border-slate-300">
-                <h4 class="text-sm font-semibold text-slate-900 mb-1">Tip for faster approvals</h4>
+              <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-4">
+                <h4 class="mb-1 text-sm font-semibold text-slate-900">Tip for faster approvals</h4>
                 <p class="text-sm text-slate-600">
                   Include clear photos, paint swatches, and contractor details in a single packet so
                   the committee has everything it needs on the first review.
