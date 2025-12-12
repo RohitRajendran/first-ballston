@@ -5,8 +5,16 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --accent-color: theme('colors.primary');
+    --accent-color-dark: theme('colors.primary-dark');
+    --surface-color: theme('colors.background-light');
+  }
+
   body {
-    @apply min-h-screen bg-background-light text-slate-900 font-sans antialiased;
+    @apply min-h-screen text-slate-900 font-sans antialiased;
+    background-color: var(--surface-color);
+    transition: background-color 150ms ease, color 150ms ease;
   }
 }
 
@@ -16,11 +24,15 @@
   }
 
   .section-eyebrow {
-    @apply inline-block font-bold tracking-[0.08em] uppercase text-[0.8rem] text-primary mb-2;
+    @apply inline-block font-bold tracking-[0.08em] uppercase text-[0.8rem] mb-2;
+    color: var(--accent-color);
   }
 
   .icon-circle {
-    @apply inline-flex items-center justify-center w-11 h-11 rounded-full bg-primary/10 text-primary;
+    @apply inline-flex items-center justify-center w-11 h-11 rounded-full;
+    background-color: color-mix(in srgb, var(--accent-color) 14%, white);
+    color: var(--accent-color);
+    transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
   }
 
   .feature-card {
@@ -29,5 +41,29 @@
 
   .feature-card:hover {
     box-shadow: theme('boxShadow.card');
+  }
+
+  .text-primary {
+    color: var(--accent-color) !important;
+  }
+
+  .bg-primary {
+    background-color: var(--accent-color) !important;
+  }
+
+  .bg-primary-dark {
+    background-color: var(--accent-color-dark) !important;
+  }
+
+  .border-primary {
+    border-color: var(--accent-color) !important;
+  }
+
+  .bg-primary\/10 {
+    background-color: color-mix(in srgb, var(--accent-color) 10%, transparent) !important;
+  }
+
+  body.theme-preview {
+    color: color-mix(in srgb, var(--accent-color) 18%, black);
   }
 }

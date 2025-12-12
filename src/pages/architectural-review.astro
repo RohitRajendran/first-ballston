@@ -119,6 +119,7 @@ const approvedColors = [
                     class="block h-full bg-white border border-slate-200 rounded-xl shadow-sm hover:-translate-y-1 hover:shadow-lg transition text-slate-900"
                     target="_blank"
                     rel="noopener"
+                    data-color-swatch={color.swatch}
                   >
                     <div class="h-36 w-full rounded-t-xl" style={`background: ${color.swatch}`}></div>
                     <div class="p-4 space-y-1">
@@ -177,4 +178,49 @@ const approvedColors = [
   </main>
 
   <Footer />
+
+  <script>
+    const cards = document.querySelectorAll('[data-color-swatch]');
+    const root = document.documentElement;
+    const body = document.body;
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+    const defaultAccent = getComputedStyle(root).getPropertyValue('--accent-color').trim();
+    const defaultAccentDark = getComputedStyle(root).getPropertyValue('--accent-color-dark').trim();
+    const defaultSurface = getComputedStyle(body).getPropertyValue('--surface-color').trim();
+    const defaultMeta = metaTheme?.getAttribute('content');
+
+    /**
+     * Apply the preview theme using the provided swatch color.
+     * @param {string} swatch
+     */
+    const applyTheme = (swatch: string) => {
+      root.style.setProperty('--accent-color', swatch);
+      root.style.setProperty('--accent-color-dark', swatch);
+      root.style.setProperty('--surface-color', `color-mix(in srgb, ${swatch} 12%, white)`);
+      metaTheme?.setAttribute('content', swatch);
+      body.classList.add('theme-preview');
+    };
+
+    const resetTheme = () => {
+      root.style.setProperty('--accent-color', defaultAccent);
+      root.style.setProperty('--accent-color-dark', defaultAccentDark);
+      root.style.setProperty('--surface-color', defaultSurface);
+      if (defaultMeta) metaTheme?.setAttribute('content', defaultMeta);
+      body.classList.remove('theme-preview');
+    };
+
+    cards.forEach((card) => {
+      const swatch = card.getAttribute('data-color-swatch');
+      if (!swatch) return;
+
+      const handleEnter = () => applyTheme(swatch);
+      const handleLeave = () => resetTheme();
+
+      card.addEventListener('mouseenter', handleEnter);
+      card.addEventListener('focus', handleEnter);
+      card.addEventListener('mouseleave', handleLeave);
+      card.addEventListener('blur', handleLeave);
+    });
+  </script>
 </BaseLayout>
