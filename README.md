@@ -18,7 +18,6 @@ npm run dev
 
 - Netlify deploys the static build output from `dist/` using the included `netlify.toml`.
 - Build command: `npm run build`
-- Node version: 20
 
 ## Project structure
 
