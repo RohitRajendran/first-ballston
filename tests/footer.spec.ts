@@ -7,8 +7,7 @@ const pages = [
   { path: "/architectural-review", heading: "Architectural Review" },
 ];
 
-const residentPortalHref =
-  "https://engage.goenumerate.com/s/firstballstoncommons/home.php";
+const residentPortalHref = "https://engage.goenumerate.com/s/firstballstoncommons/home.php";
 
 test.describe("Footer", () => {
   for (const { path, heading } of pages) {

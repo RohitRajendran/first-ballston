@@ -30,7 +30,7 @@ test("navbar shows expected links and navigates across pages", async ({ page }) 
     .first();
   await expect(navResidentPortal).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/home.php",
+    "https://engage.goenumerate.com/s/firstballstoncommons/home.php"
   );
 
   await aboutLink.click();
@@ -39,7 +39,9 @@ test("navbar shows expected links and navigates across pages", async ({ page }) 
 
   await homeLink.click();
   await expect(page).toHaveURL(/\/$/);
-  await expect(page.getByRole("heading", { level: 1, name: "First Ballston Commons" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { level: 1, name: "First Ballston Commons" })
+  ).toBeVisible();
 
   await openResidentsMenu();
   await page.getByRole("link", { name: "Notice to Residents" }).click();

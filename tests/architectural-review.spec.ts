@@ -14,7 +14,10 @@ test("architectural review download link opens PDF", async ({ page }) => {
   await page.goto("/architectural-review");
   const downloadRequestForm = page.getByRole("link", { name: "Download request form" });
   await expect(downloadRequestForm).toBeVisible();
-  await expect(downloadRequestForm).toHaveAttribute("href", "/assets/architectural-approval-form.pdf");
+  await expect(downloadRequestForm).toHaveAttribute(
+    "href",
+    "/assets/architectural-approval-form.pdf"
+  );
 });
 
 test("architectural review contact manager link opens contact page", async ({ page, context }) => {
@@ -22,12 +25,12 @@ test("architectural review contact manager link opens contact page", async ({ pa
   const contactManager = page.getByRole("link", { name: /Contact community manager/i });
   await expect(contactManager).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941",
+    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
   );
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), contactManager.click()]);
   await newPage.waitForLoadState("domcontentloaded");
   expect(newPage.url()).toContain(
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941",
+    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
   );
 });

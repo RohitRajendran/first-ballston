@@ -16,13 +16,13 @@ test("notice to residents parking permit link opens county page", async ({ page,
   const parkingPermitLink = page.getByRole("link", { name: /Residential-Permit-Parking/i });
   await expect(parkingPermitLink).toHaveAttribute(
     "href",
-    "https://www.arlingtonva.us/Government/Programs/Transportation/Parking/Residential-Permit-Parking",
+    "https://www.arlingtonva.us/Government/Programs/Transportation/Parking/Residential-Permit-Parking"
   );
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), parkingPermitLink.click()]);
   await newPage.waitForLoadState("domcontentloaded");
   expect(newPage.url()).toContain(
-    "https://www.arlingtonva.us/Government/Programs/Transportation/Parking/Residential-Permit-Parking",
+    "https://www.arlingtonva.us/Government/Programs/Transportation/Parking/Residential-Permit-Parking"
   );
 });
 
@@ -31,7 +31,7 @@ test("notice to residents resident portal link opens portal", async ({ page, con
   const residentPortal = page.getByRole("link", { name: /Resident portal/i }).first();
   await expect(residentPortal).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/home.php",
+    "https://engage.goenumerate.com/s/firstballstoncommons/home.php"
   );
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), residentPortal.click()]);
