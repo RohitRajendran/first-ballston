@@ -1,20 +1,7 @@
 ---
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about-the-community", label: "About the Community" },
-];
+import { isActivePath, navLinks, normalizePath, residentLinks } from "../utils/navigation";
 
-const residentLinks = [
-  { href: "/notice-to-residents", label: "Notice to Residents" },
-  { href: "/architectural-review", label: "Architectural Review" },
-  {
-    href: "https://engage.goenumerate.com/s/firstballstoncommons/home.php",
-    label: "Resident Portal",
-    external: true,
-  },
-];
-
-const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+const pathname = normalizePath(Astro.url.pathname);
 ---
 
 <nav class="fixed start-0 top-0 z-50 w-full border-b border-slate-200 bg-white shadow-sm">
@@ -39,7 +26,7 @@ const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
       >
         {
           navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = isActivePath(pathname, link.href);
             return (
               <li>
                 <a
@@ -76,7 +63,7 @@ const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
                 residentLinks.map((link) => (
                   <a
                     class={`block rounded-lg px-3 py-2 hover:bg-slate-100 ${
-                      pathname === link.href
+                      isActivePath(pathname, link.href)
                         ? "text-primary font-semibold lg:font-medium"
                         : "text-slate-700"
                     } ${link.external ? "inline-flex w-full items-center gap-2" : ""}`}
