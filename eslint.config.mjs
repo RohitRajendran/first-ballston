@@ -5,6 +5,7 @@ import pluginImport from "eslint-plugin-import";
 import pluginSecurity from "eslint-plugin-security";
 import pluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 import pluginUnicorn from "eslint-plugin-unicorn";
+import pluginPlaywright from "eslint-plugin-playwright";
 import prettier from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
 
@@ -27,6 +28,8 @@ const astroRecommended = pluginAstro.configs["flat/recommended"].map((config) =>
     },
   };
 });
+
+const playwrightRecommended = pluginPlaywright.configs["flat/recommended"];
 
 export default [
   {
@@ -70,6 +73,10 @@ export default [
       // keep existing DOM query pattern
       "unicorn/prefer-query-selector": "off",
     },
+  },
+  {
+    ...playwrightRecommended,
+    files: ["tests/**/*.{js,ts,jsx,tsx}"],
   },
   prettier,
 ];
