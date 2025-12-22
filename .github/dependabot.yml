@@ -28,3 +28,15 @@ updates:
       types:
         patterns:
           - "@types*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+    target-branch: "main"
+    groups:
+      actions:
+        patterns:
+          - "actions/*"
