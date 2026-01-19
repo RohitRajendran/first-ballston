@@ -19,14 +19,14 @@
     "test:e2e": "npm run build && playwright test"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^6.6.3",
-    "@astrojs/sitemap": "^3.6.1",
+    "@astrojs/netlify": "^6.6.4",
+    "@astrojs/sitemap": "^3.7.0",
     "@playwright/test": "^1.57.0",
     "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^25.0.9",
     "@typescript-eslint/eslint-plugin": "^8.53.0",
     "@typescript-eslint/parser": "^8.53.0",
-    "astro": "^5.16.8",
+    "astro": "^5.16.11",
     "cspell": "^9.6.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
