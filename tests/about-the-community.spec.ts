@@ -33,12 +33,12 @@ test("about page management office link opens contact page", async ({ page, cont
   await expect(managementOffice).toBeVisible();
   await expect(managementOffice).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
   );
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), managementOffice.click()]);
   await newPage.waitForLoadState("domcontentloaded");
   expect(newPage.url()).toContain(
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
   );
 });

@@ -25,13 +25,13 @@ test("Get in touch button navigates to contact page", async ({ page, context }) 
   await expect(getInTouch).toBeVisible();
   await expect(getInTouch).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
   );
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), getInTouch.click()]);
   await newPage.waitForLoadState("domcontentloaded");
   expect(newPage.url()).toContain(
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
   );
 });
 
