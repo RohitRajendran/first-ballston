@@ -30,19 +30,14 @@ test("Get in touch button navigates to contact page", async ({ page, context }) 
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), getInTouch.click()]);
   await newPage.waitForLoadState("domcontentloaded");
-  expect(newPage.url()).toContain(
-    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
-  );
+  expect(newPage.url()).toContain("https://capitolcorp.cincwebaxis.com/cinc/contact-us/");
 });
 
 test("Resident portal button navigates to portal", async ({ page, context }) => {
   await page.goto("/");
   const residentPortal = page.getByRole("link", { name: /Resident portal/i }).first();
   await expect(residentPortal).toBeVisible();
-  await expect(residentPortal).toHaveAttribute(
-    "href",
-    "https://capitolcorp.cincwebaxis.com"
-  );
+  await expect(residentPortal).toHaveAttribute("href", "https://capitolcorp.cincwebaxis.com");
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), residentPortal.click()]);
   await newPage.waitForLoadState("domcontentloaded");

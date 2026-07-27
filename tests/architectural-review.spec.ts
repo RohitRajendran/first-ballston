@@ -30,7 +30,5 @@ test("architectural review contact manager link opens contact page", async ({ pa
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), contactManager.click()]);
   await newPage.waitForLoadState("domcontentloaded");
-  expect(newPage.url()).toContain(
-    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
-  );
+  expect(newPage.url()).toContain("https://capitolcorp.cincwebaxis.com/cinc/contact-us/");
 });

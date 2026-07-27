@@ -17,10 +17,7 @@ test("about page resident portal link opens portal", async ({ page, context }) =
   await page.goto("/about-the-community");
   const residentPortal = page.getByRole("link", { name: /Resident portal/i }).first();
   await expect(residentPortal).toBeVisible();
-  await expect(residentPortal).toHaveAttribute(
-    "href",
-    "https://capitolcorp.cincwebaxis.com"
-  );
+  await expect(residentPortal).toHaveAttribute("href", "https://capitolcorp.cincwebaxis.com");
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), residentPortal.click()]);
   await newPage.waitForLoadState("domcontentloaded");
@@ -38,7 +35,5 @@ test("about page management office link opens contact page", async ({ page, cont
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), managementOffice.click()]);
   await newPage.waitForLoadState("domcontentloaded");
-  expect(newPage.url()).toContain(
-    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
-  );
+  expect(newPage.url()).toContain("https://capitolcorp.cincwebaxis.com/cinc/contact-us/");
 });

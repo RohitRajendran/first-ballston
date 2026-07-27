@@ -28,10 +28,7 @@ test("navbar shows expected links and navigates across pages", async ({ page }) 
     .getByRole("navigation")
     .getByRole("link", { name: /Resident Portal/i })
     .first();
-  await expect(navResidentPortal).toHaveAttribute(
-    "href",
-    "https://capitolcorp.cincwebaxis.com"
-  );
+  await expect(navResidentPortal).toHaveAttribute("href", "https://capitolcorp.cincwebaxis.com");
 
   await aboutLink.click();
   await expect(page).toHaveURL(/\/about-the-community\/?$/);

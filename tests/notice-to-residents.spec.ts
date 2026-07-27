@@ -29,10 +29,7 @@ test("notice to residents parking permit link opens county page", async ({ page,
 test("notice to residents resident portal link opens portal", async ({ page, context }) => {
   await page.goto("/notice-to-residents");
   const residentPortal = page.getByRole("link", { name: /Resident portal/i }).first();
-  await expect(residentPortal).toHaveAttribute(
-    "href",
-    "https://capitolcorp.cincwebaxis.com"
-  );
+  await expect(residentPortal).toHaveAttribute("href", "https://capitolcorp.cincwebaxis.com");
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), residentPortal.click()]);
   await newPage.waitForLoadState("domcontentloaded");
