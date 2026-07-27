@@ -19,12 +19,12 @@ test("about page resident portal link opens portal", async ({ page, context }) =
   await expect(residentPortal).toBeVisible();
   await expect(residentPortal).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/home.php"
+    "https://capitolcorp.cincwebaxis.com"
   );
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), residentPortal.click()]);
   await newPage.waitForLoadState("domcontentloaded");
-  expect(newPage.url()).toContain("https://engage.goenumerate.com/s/firstballstoncommons/home.php");
+  expect(newPage.url()).toContain("https://capitolcorp.cincwebaxis.com");
 });
 
 test("about page management office link opens contact page", async ({ page, context }) => {

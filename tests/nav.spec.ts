@@ -30,7 +30,7 @@ test("navbar shows expected links and navigates across pages", async ({ page }) 
     .first();
   await expect(navResidentPortal).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/home.php"
+    "https://capitolcorp.cincwebaxis.com"
   );
 
   await aboutLink.click();
