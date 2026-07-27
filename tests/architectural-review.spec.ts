@@ -25,12 +25,10 @@ test("architectural review contact manager link opens contact page", async ({ pa
   const contactManager = page.getByRole("link", { name: /Contact community manager/i });
   await expect(contactManager).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
   );
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), contactManager.click()]);
   await newPage.waitForLoadState("domcontentloaded");
-  expect(newPage.url()).toContain(
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
-  );
+  expect(newPage.url()).toContain("https://capitolcorp.cincwebaxis.com/cinc/contact-us/");
 });

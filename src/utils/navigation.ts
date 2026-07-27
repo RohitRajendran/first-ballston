@@ -18,7 +18,7 @@ export const residentLinks: ResidentLink[] = [
   { href: "/notice-to-residents", label: "Notice to Residents" },
   { href: "/architectural-review", label: "Architectural Review" },
   {
-    href: "https://engage.goenumerate.com/s/firstballstoncommons/home.php",
+    href: "https://capitolcorp.cincwebaxis.com",
     label: "Resident Portal",
     external: true,
   },

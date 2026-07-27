@@ -25,26 +25,21 @@ test("Get in touch button navigates to contact page", async ({ page, context }) 
   await expect(getInTouch).toBeVisible();
   await expect(getInTouch).toHaveAttribute(
     "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
+    "https://capitolcorp.cincwebaxis.com/cinc/contact-us/"
   );
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), getInTouch.click()]);
   await newPage.waitForLoadState("domcontentloaded");
-  expect(newPage.url()).toContain(
-    "https://engage.goenumerate.com/s/firstballstoncommons/hoapage.php?page=contact_17941"
-  );
+  expect(newPage.url()).toContain("https://capitolcorp.cincwebaxis.com/cinc/contact-us/");
 });
 
 test("Resident portal button navigates to portal", async ({ page, context }) => {
   await page.goto("/");
   const residentPortal = page.getByRole("link", { name: /Resident portal/i }).first();
   await expect(residentPortal).toBeVisible();
-  await expect(residentPortal).toHaveAttribute(
-    "href",
-    "https://engage.goenumerate.com/s/firstballstoncommons/home.php"
-  );
+  await expect(residentPortal).toHaveAttribute("href", "https://capitolcorp.cincwebaxis.com");
 
   const [newPage] = await Promise.all([context.waitForEvent("page"), residentPortal.click()]);
   await newPage.waitForLoadState("domcontentloaded");
-  expect(newPage.url()).toContain("https://engage.goenumerate.com/s/firstballstoncommons/home.php");
+  expect(newPage.url()).toContain("https://capitolcorp.cincwebaxis.com");
 });
